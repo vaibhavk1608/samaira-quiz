@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path";
 const subjects = ["Math", "Reading", "Science", "Spelling"];
 const countsBySubject = { Math: 125, Reading: 125, Science: 125, Spelling: 125 };
 const grade = 2;
+const familyNames = ["Samaira", "Sahir", "Vaibhav", "Nitisha"];
 
 const sightWords = ["because", "before", "around", "friend", "always", "pretty", "school", "family", "together", "please", "small", "found"];
 const spellingWords = [
@@ -33,77 +34,81 @@ const spellingWords = [
   ["teacher", "a person who helps students learn"],
 ];
 
-const science = [
-  ["What does a seed grow into?", ["Plant", "Rock", "Cloud", "Spoon"], 0, "A seed can sprout.", "A seed can grow into a plant."],
-  ["Which object is pulled by a magnet?", ["Paper clip", "Apple", "Crayon", "Leaf"], 0, "It is made of metal.", "A paper clip can be pulled by a magnet."],
-  ["What is a baby frog called?", ["Tadpole", "Kitten", "Calf", "Chick"], 0, "It swims before it grows legs.", "A baby frog is called a tadpole."],
-  ["Which weather has water falling from clouds?", ["Rain", "Sunny", "Windy", "Foggy"], 0, "You may use an umbrella.", "Rain is water falling from clouds."],
-  ["What do lungs help you do?", ["Breathe", "Draw", "Jump", "Taste"], 0, "You use them when you inhale.", "Lungs help us breathe."],
-  ["Which material is clear and used in windows?", ["Glass", "Wood", "Cloth", "Paper"], 0, "You can see through it.", "Glass is clear and used in windows."],
-  ["What happens to ice when it gets warm?", ["It melts", "It sings", "It grows fur", "It turns into sand"], 0, "Warmth changes it to liquid water.", "Ice melts into water when it gets warm."],
-  ["Which animal group has scales and lays eggs?", ["Fish", "Dogs", "Birds", "Horses"], 0, "Many of them swim.", "Fish have scales and lay eggs."],
-  ["Which part of a plant takes in water?", ["Roots", "Petals", "Fruit", "Stem"], 0, "This part is usually in soil.", "Roots take in water from soil."],
-  ["What do animals need to live?", ["Food and water", "Glue and paper", "Shoes and hats", "Books and crayons"], 0, "Think about basic needs.", "Animals need food, water, air, and shelter."],
-  ["Which tool can measure how hot or cold something is?", ["Thermometer", "Ruler", "Clock", "Compass"], 0, "It uses degrees.", "A thermometer measures temperature."],
-  ["What is a habitat?", ["A place where an animal lives", "A kind of snack", "A school supply", "A type of shoe"], 0, "Animals find food and shelter there.", "A habitat is a place where an animal lives."],
+const scienceFacts = [
+  { skill: "plants", question: "What does a seed grow into?", correct: "Plant", distractors: ["Rock", "Cloud", "Spoon"], hint: "A seed can sprout.", explanation: "A seed can grow into a plant." },
+  { skill: "magnets", question: "Which object is pulled by a magnet?", correct: "Paper clip", distractors: ["Apple", "Crayon", "Leaf"], hint: "It is made of metal.", explanation: "A paper clip can be pulled by a magnet." },
+  { skill: "animal-life-cycles", question: "What is a baby frog called?", correct: "Tadpole", distractors: ["Kitten", "Calf", "Chick"], hint: "It swims before it grows legs.", explanation: "A baby frog is called a tadpole." },
+  { skill: "weather", question: "Which weather has water falling from clouds?", correct: "Rain", distractors: ["Sunny", "Windy", "Foggy"], hint: "You may use an umbrella.", explanation: "Rain is water falling from clouds." },
+  { skill: "body-systems", question: "What do lungs help you do?", correct: "Breathe", distractors: ["Draw", "Jump", "Taste"], hint: "You use them when you inhale.", explanation: "Lungs help us breathe." },
+  { skill: "materials", question: "Which material is clear and used in windows?", correct: "Glass", distractors: ["Wood", "Cloth", "Paper"], hint: "You can see through it.", explanation: "Glass is clear and used in windows." },
+  { skill: "matter", question: "What happens to ice when it gets warm?", correct: "It melts", distractors: ["It sings", "It grows fur", "It turns into sand"], hint: "Warmth changes it to liquid water.", explanation: "Ice melts into water when it gets warm." },
+  { skill: "animal-groups", question: "Which animal group has scales and lays eggs?", correct: "Fish", distractors: ["Dogs", "Birds", "Horses"], hint: "Many of them swim.", explanation: "Fish have scales and lay eggs." },
+  { skill: "plant-parts", question: "Which part of a plant takes in water?", correct: "Roots", distractors: ["Petals", "Fruit", "Stem"], hint: "This part is usually in soil.", explanation: "Roots take in water from soil." },
+  { skill: "animal-needs", question: "What do animals need to live?", correct: "Food and water", distractors: ["Glue and paper", "Shoes and hats", "Books and crayons"], hint: "Think about basic needs.", explanation: "Animals need food, water, air, and shelter." },
+  { skill: "tools", question: "Which tool can measure how hot or cold something is?", correct: "Thermometer", distractors: ["Ruler", "Clock", "Compass"], hint: "It uses degrees.", explanation: "A thermometer measures temperature." },
+  { skill: "habitats", question: "What is a habitat?", correct: "A place where an animal lives", distractors: ["A kind of snack", "A school supply", "A type of shoe"], hint: "Animals find food and shelter there.", explanation: "A habitat is a place where an animal lives." },
+  { skill: "senses", question: "Which sense helps Samaira hear music?", correct: "Hearing", distractors: ["Taste", "Smell", "Touch"], hint: "Use your ears.", explanation: "Hearing is the sense that helps us hear music." },
+  { skill: "earth", question: "What gives Earth light during the day?", correct: "The Sun", distractors: ["A pencil", "A fish", "A backpack"], hint: "It is bright in the sky.", explanation: "The Sun gives Earth light during the day." },
+  { skill: "sound", question: "What makes sound when it vibrates?", correct: "A guitar string", distractors: ["A quiet sock", "A still rock", "A closed book"], hint: "Vibrate means move back and forth quickly.", explanation: "A guitar string can vibrate and make sound." },
+  { skill: "water-cycle", question: "What can clouds bring to the ground?", correct: "Rain", distractors: ["Chairs", "Pencils", "Shoes"], hint: "It is water from the sky.", explanation: "Clouds can bring rain to the ground." },
 ];
 
 const reading = [
   {
-    passage: "Lina planted three seeds. Each day she gave them water. Soon, tiny green leaves came up.",
-    question: "What happened after Lina watered the seeds?",
+    passage: "Samaira planted three seeds. Each day she gave them water. Soon, tiny green leaves came up.",
+    question: "What happened after Samaira watered the seeds?",
     choices: ["Leaves came up", "The seeds disappeared", "It snowed inside", "She lost the pot"],
     answerIndex: 0,
     hint: "Look at the last sentence.",
-    explanation: "Tiny green leaves came up after Lina cared for the seeds.",
+    explanation: "Tiny green leaves came up after Samaira cared for the seeds.",
   },
   {
-    passage: "Omar forgot his lunch. His friend shared a sandwich. Omar smiled and said thank you.",
-    question: "How did Omar's friend help?",
+    passage: "Sahir forgot his lunch. Nitisha shared a sandwich. Sahir smiled and said thank you.",
+    question: "How did Nitisha help?",
     choices: ["Shared a sandwich", "Took his pencil", "Closed the door", "Drew a map"],
     answerIndex: 0,
-    hint: "A friend helped with lunch.",
-    explanation: "Omar's friend shared a sandwich with him.",
+    hint: "A family member helped with lunch.",
+    explanation: "Nitisha shared a sandwich with Sahir.",
   },
   {
-    passage: "The class made a paper chain. Each child added one link. The chain got longer and longer.",
+    passage: "Samaira and Sahir made a paper chain. Each person added one link. The chain got longer and longer.",
     question: "What is the main idea?",
-    choices: ["The class made a chain together", "The class ate apples", "One child went home", "The paper was lost"],
+    choices: ["They made a chain together", "They ate apples", "One child went home", "The paper was lost"],
     answerIndex: 0,
     hint: "Choose the answer that tells what the whole story is about.",
-    explanation: "The passage is mostly about the class making a paper chain together.",
+    explanation: "The passage is mostly about Samaira and Sahir making a paper chain together.",
   },
   {
-    passage: "Nia heard thunder. She put on her raincoat before she walked outside.",
-    question: "Why did Nia put on a raincoat?",
-    choices: ["She thought it might rain", "She wanted to swim", "She was going to bed", "She had a sunburn"],
+    passage: "Vaibhav heard thunder. He put on his raincoat before he walked outside.",
+    question: "Why did Vaibhav put on a raincoat?",
+    choices: ["He thought it might rain", "He wanted to swim", "He was going to bed", "He had a sunburn"],
     answerIndex: 0,
     hint: "Thunder can be a clue about weather.",
-    explanation: "Nia heard thunder, so she thought it might rain.",
+    explanation: "Vaibhav heard thunder, so he thought it might rain.",
   },
   {
-    passage: "Max practiced tying his shoes every morning. On Friday, he tied them without help.",
+    passage: "Samaira practiced tying her shoes every morning. On Friday, she tied them without help.",
     question: "What lesson does the story teach?",
     choices: ["Practice helps you improve", "Shoes should stay untied", "Friday is always cold", "Morning is for sleeping"],
     answerIndex: 0,
     hint: "Think about what changed after practice.",
-    explanation: "Max improved because he practiced.",
+    explanation: "Samaira improved because she practiced.",
   },
 ];
 
-const storyNames = ["Ava", "Leo", "Maya", "Noah", "Zoe", "Eli", "Ria", "Milo", "Tara", "Ben"];
+const storyNames = ["Samaira", "Sahir", "Vaibhav", "Nitisha", "Ava", "Leo", "Maya", "Noah", "Zoe", "Eli"];
 const storyPlaces = ["park", "library", "garden", "classroom", "kitchen", "playground", "porch", "market", "zoo", "beach"];
 const storyObjects = ["blue kite", "red book", "small shell", "yellow cup", "green leaf", "paper star", "soft scarf", "tiny seed", "silver key", "brown basket"];
 const storyActions = ["found", "carried", "shared", "washed", "saved", "counted", "packed", "painted", "fixed", "sorted"];
 const completeSentences = [
   ["The bright bird sang.", "Under the table.", "Ran very fast.", "Because it was."],
-  ["My sister packed lunch.", "After the bell.", "Jumped over.", "With a red hat."],
+  ["Nitisha packed lunch.", "After the bell.", "Jumped over.", "With a red hat."],
   ["The puppy slept quietly.", "Near the door.", "Before school.", "And then."],
   ["We walked to the library.", "In the blue box.", "Because happy.", "Found three."],
-  ["Dad watered the garden.", "Across the street.", "Very quickly.", "When the."],
+  ["Vaibhav watered the garden.", "Across the street.", "Very quickly.", "When the."],
   ["The class cleaned up.", "Beside my chair.", "After lunch.", "With crayons."],
   ["Samaira drew a rainbow.", "Under a cloud.", "Before the.", "Running fast."],
-  ["The small boat floated.", "On the.", "Because it.", "With my friend."],
+  ["Sahir helped clean up.", "On the.", "Because it.", "With my friend."],
 ];
 const vocabQuestions = [
   ["What does \"before\" mean?", "Earlier than", ["After", "Beside", "Very loud"], "Breakfast comes before lunch.", "\"Before\" means earlier than something else."],
@@ -152,6 +157,8 @@ function rotateChoices(correct, distractors, seed) {
 
 function mathQuestion(n) {
   const mode = n % 7;
+  const name = familyNames[n % familyNames.length];
+  const helper = familyNames[(n + 1) % familyNames.length];
   if (mode === 0) {
     const a = 12 + (n % 28);
     const b = 5 + ((n * 3) % 18);
@@ -182,12 +189,12 @@ function mathQuestion(n) {
     const a = 7 + (n % 12);
     const b = 3 + (n % 9);
     const correct = a + b;
-    return { skill: "addition-word-problems", question: `Samaira read ${a} pages in the morning and ${b} pages later. How many pages did she read?`, ...rotateChoices(correct, [correct - 1, correct + 2, correct + 4], n), hint: "The story asks how many in all.", explanation: `${a} + ${b} = ${correct} pages.` };
+    return { skill: "addition-word-problems", question: `${name} read ${a} pages and ${helper} read ${b} pages. How many pages did they read in all?`, ...rotateChoices(correct, [correct - 1, correct + 2, correct + 4], n), hint: "The story asks how many in all.", explanation: `${a} + ${b} = ${correct} pages.` };
   }
   const b = 2 + (n % 8);
   const correct = 6 + (n % 14);
   const a = correct + b;
-  return { skill: "subtraction-word-problems", question: `Samaira had ${a} crayons. She gave away ${b}. How many crayons are left?`, ...rotateChoices(correct, [correct + 1, Math.max(0, correct - 1), correct + 3], n), hint: "Giving away means subtract.", explanation: `${a} - ${b} = ${correct} crayons.` };
+  return { skill: "subtraction-word-problems", question: `${name} had ${a} crayons. ${name} gave ${b} crayons to ${helper}. How many crayons are left?`, ...rotateChoices(correct, [correct + 1, Math.max(0, correct - 1), correct + 3], n), hint: "Giving away means subtract.", explanation: `${a} - ${b} = ${correct} crayons.` };
 }
 
 function readingQuestion(n) {
@@ -218,23 +225,36 @@ function readingQuestion(n) {
   }
   if (mode === 2) {
     const choices = completeSentences[Math.floor(n / 4) % completeSentences.length];
-    return { skill: "sentence-meaning", question: `Which sentence is complete?`, choices, answerIndex: 0, hint: "A complete sentence tells a full idea.", explanation: `"${choices[0]}" is a complete sentence.` };
+    return { skill: "sentence-meaning", question: "Which sentence is complete?", choices, answerIndex: 0, hint: "A complete sentence tells a full idea.", explanation: `"${choices[0]}" is a complete sentence.` };
   }
   const [question, correct, distractors, hint, explanation] = vocabQuestions[Math.floor(n / 4) % vocabQuestions.length];
   return { skill: "reading-vocabulary", question, ...rotateChoices(correct, distractors, n), hint, explanation };
 }
 
 function scienceQuestion(n) {
-  const [question, choices, answerIndex, hint, explanation] = science[n % science.length];
-  const reviewWords = ["", "Review: ", "Think: ", "Try this: "];
-  return { skill: "grade-2-science", question: `${reviewWords[Math.floor(n / science.length) % reviewWords.length]}${question}`, choices, answerIndex, hint, explanation };
+  const item = scienceFacts[n % scienceFacts.length];
+  const name = familyNames[Math.floor(n / scienceFacts.length) % familyNames.length];
+  const mode = Math.floor(n / scienceFacts.length) % 4;
+  const openings = [
+    item.question,
+    `${name} is learning science. ${item.question}`,
+    `${name} asks: ${item.question}`,
+    `At home, ${name} wonders: ${item.question}`,
+  ];
+  return { skill: item.skill, question: openings[mode], ...rotateChoices(item.correct, item.distractors, n), hint: item.hint, explanation: item.explanation };
 }
 
 function spellingQuestion(n) {
   const [word, clue] = spellingWords[n % spellingWords.length];
   const words = spellingWords.map(([item]) => item);
   const wrong = [`${word.slice(0, -1)}e`, word.replace(/[aeiou]/, ""), `${word}${word.at(-1)}`].filter((item, index, list) => item && item !== word && list.indexOf(item) === index);
-  return { skill: "grade-2-spelling", question: `Which spelling is correct for ${clue}?`, ...rotateChoices(word, [...wrong, words[(n + 4) % words.length]], n), hint: `Listen for the sounds in the answer word.`, explanation: `"${word}" is spelled correctly.` };
+  const name = familyNames[Math.floor(n / spellingWords.length) % familyNames.length];
+  const starters = [
+    `Which spelling is correct for ${clue}?`,
+    `${name} is writing a word that means ${clue}. Which spelling is correct?`,
+    `${name} sees this clue: ${clue}. Which word is spelled correctly?`,
+  ];
+  return { skill: "grade-2-spelling", question: starters[Math.floor(n / spellingWords.length) % starters.length], ...rotateChoices(word, [...wrong, words[(n + 4) % words.length]], n), hint: "Listen for the sounds in the answer word.", explanation: `"${word}" is spelled correctly.` };
 }
 
 function buildQuestion(subject, number) {

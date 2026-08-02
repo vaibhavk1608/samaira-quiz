@@ -120,6 +120,14 @@ function isAllowedQuestion(question: Question) {
   return question.grade === 2 && !blockedQuestionPattern.test(`${question.question} ${question.skill ?? ""}`);
 }
 
+function questionPattern(question: Question) {
+  return question.question
+    .replace(/^(Review: |Think: |Try this: )/, "")
+    .replace(/^(Samaira|Sahir|Vaibhav|Nitisha) (is learning science|asks|wonders).*? /, "")
+    .replace(/\b\d+\b/g, "#")
+    .toLowerCase();
+}
+
 function pickSession(questions: Question[], subject: Subject, recentIds: string[]) {
   const pool = questions.filter((question) => question.subject === subject);
   const practice = pool.filter((question) => question.source === "practice" && !recentIds.includes(question.id));
@@ -134,9 +142,26 @@ function pickSession(questions: Question[], subject: Subject, recentIds: string[
         uniqueByPrompt.set(key, question);
       }
     });
+  const skillCounts = new Map<string, number>();
+  const patternCounts = new Map<string, number>();
+  const selected: Question[] = [];
+  const maxSkillCount = subject === "Science" ? 1 : subject === "Reading" ? 5 : subject === "Spelling" ? 4 : 3;
+  Array.from(uniqueByPrompt.values()).forEach((question) => {
+    const skill = question.skill ?? question.subject;
+    const pattern = questionPattern(question);
+    const skillCount = skillCounts.get(skill) ?? 0;
+    const patternCount = patternCounts.get(pattern) ?? 0;
+    if (selected.length < SESSION_SIZE && skillCount < maxSkillCount && patternCount < 1) {
+      selected.push(question);
+      skillCounts.set(skill, skillCount + 1);
+      patternCounts.set(pattern, patternCount + 1);
+    }
+  });
   const unique = Array.from(uniqueByPrompt.values());
   const fallback = [...usable].sort(() => Math.random() - 0.5);
-  return (unique.length >= SESSION_SIZE ? unique : [...unique, ...fallback]).slice(0, SESSION_SIZE);
+  const selectedIds = new Set(selected.map((question) => question.id));
+  const fill = [...unique, ...fallback].filter((question) => !selectedIds.has(question.id));
+  return (selected.length >= SESSION_SIZE ? selected : [...selected, ...fill]).slice(0, SESSION_SIZE);
 }
 
 function extractNumbers(text: string) {
@@ -497,7 +522,7 @@ function App() {
               })}
             </div>
 
-            <div className="lesson-box">
+            <div className={`lesson-box ${selectedIndex !== null ? (selectedIndex === currentQuestion.answerIndex ? "correct-feedback" : "wrong-feedback") : ""}`}>
               {selectedIndex === null ? (
                 <>
                   <button type="button" className="hint-button" onClick={() => setShowHint(!showHint)}>
@@ -507,7 +532,14 @@ function App() {
                 </>
               ) : (
                 <>
-                  <p>{currentQuestion.explanation}</p>
+                  <div className="feedback-copy">
+                    <strong>{selectedIndex === currentQuestion.answerIndex ? "Correct!" : "Good try!"}</strong>
+                    <p>
+                      {selectedIndex === currentQuestion.answerIndex
+                        ? currentQuestion.explanation
+                        : `The correct answer is "${currentQuestion.choices[currentQuestion.answerIndex]}". ${currentQuestion.explanation}`}
+                    </p>
+                  </div>
                   <button type="button" className="next-button" onClick={nextQuestion}>
                     {currentIndex + 1 >= session.length ? "See Results" : "Next Question"}
                   </button>

@@ -9,6 +9,7 @@ if (!json) {
 const questions = JSON.parse(json);
 const subjects = ["Math", "Reading", "Science", "Spelling"];
 const sessionSize = 15;
+const familyNames = ["Samaira", "Sahir", "Vaibhav", "Nitisha"];
 
 function fail(message, question) {
   const suffix = question ? `\n${question.id}: ${question.question}` : "";
@@ -29,8 +30,14 @@ function extractNumbers(text) {
   return Array.from(text.matchAll(/\d+/g), (match) => Number(match[0]));
 }
 
-function stripPrefix(text) {
-  return text.replace(/^(Review: |Think: |Try this: )/, "");
+function normalizePattern(question) {
+  return question.question
+    .replace(/^Read: ".*?" /, "read-passage ")
+    .replace(/^(Samaira|Sahir|Vaibhav|Nitisha) is learning science\. /, "")
+    .replace(/^(Samaira|Sahir|Vaibhav|Nitisha) asks: /, "")
+    .replace(/^At home, (Samaira|Sahir|Vaibhav|Nitisha) wonders: /, "")
+    .replace(/\b\d+\b/g, "#")
+    .toLowerCase();
 }
 
 function verifyMath(question) {
@@ -67,27 +74,6 @@ function verifyMath(question) {
   fail("Unrecognized math pattern.", question);
 }
 
-const scienceAnswers = new Map([
-  ["What does a seed grow into?", "Plant"],
-  ["Which object is pulled by a magnet?", "Paper clip"],
-  ["What is a baby frog called?", "Tadpole"],
-  ["Which weather has water falling from clouds?", "Rain"],
-  ["What do lungs help you do?", "Breathe"],
-  ["Which material is clear and used in windows?", "Glass"],
-  ["What happens to ice when it gets warm?", "It melts"],
-  ["Which animal group has scales and lays eggs?", "Fish"],
-  ["Which part of a plant takes in water?", "Roots"],
-  ["What do animals need to live?", "Food and water"],
-  ["Which tool can measure how hot or cold something is?", "Thermometer"],
-  ["What is a habitat?", "A place where an animal lives"],
-]);
-
-function verifyScience(question) {
-  const base = stripPrefix(question.question);
-  assert(scienceAnswers.has(base), "Unrecognized science question.", question);
-  assert(correctChoice(question) === scienceAnswers.get(base), "Science answer is wrong.", question);
-}
-
 const vocabAnswers = new Map([
   ['What does "before" mean?', "Earlier than"],
   ['What does "together" mean?', "With each other"],
@@ -122,27 +108,51 @@ function verifyReading(question) {
   fail("Unrecognized reading skill.", question);
 }
 
+function verifyScience(question) {
+  const answer = correctChoice(question);
+  const explanation = question.explanation.toLowerCase();
+  assert(question.skill && question.skill !== "grade-2-science", "Science question needs a specific skill.", question);
+  assert(
+    explanation.includes(answer.toLowerCase()) || answer.toLowerCase().split(" ").some((word) => word.length > 3 && explanation.includes(word)),
+    "Science explanation does not support the answer.",
+    question,
+  );
+}
+
 function verifySpelling(question) {
   const quoted = question.explanation.match(/"([^"]+)"/)?.[1];
   assert(quoted, "Spelling explanation should quote the correct word.", question);
   assert(correctChoice(question) === quoted, "Spelling answer is wrong.", question);
 }
 
-function pickSession(pool, recentIds = []) {
-  const fresh = pool.filter((question) => !recentIds.includes(question.id));
-  const usable = fresh.length >= sessionSize ? fresh : pool;
+function pickSession(pool, subject) {
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
   const uniqueByPrompt = new Map();
-  [...usable]
-    .sort(() => Math.random() - 0.5)
-    .forEach((question) => {
-      const key = `${question.subject}:${question.question}`;
-      if (!uniqueByPrompt.has(key)) {
-        uniqueByPrompt.set(key, question);
-      }
-    });
-  const unique = Array.from(uniqueByPrompt.values());
-  const fallback = [...usable].sort(() => Math.random() - 0.5);
-  return (unique.length >= sessionSize ? unique : [...unique, ...fallback]).slice(0, sessionSize);
+  shuffled.forEach((question) => {
+    const key = `${question.subject}:${question.question}`;
+    if (!uniqueByPrompt.has(key)) {
+      uniqueByPrompt.set(key, question);
+    }
+  });
+
+  const maxSkillCount = subject === "Science" ? 1 : subject === "Reading" ? 5 : subject === "Spelling" ? 4 : 3;
+  const selected = [];
+  const skillCounts = new Map();
+  const patternCounts = new Map();
+  Array.from(uniqueByPrompt.values()).forEach((question) => {
+    const skill = question.skill ?? question.subject;
+    const pattern = normalizePattern(question);
+    const skillCount = skillCounts.get(skill) ?? 0;
+    const patternCount = patternCounts.get(pattern) ?? 0;
+    if (selected.length < sessionSize && skillCount < maxSkillCount && patternCount < 1) {
+      selected.push(question);
+      skillCounts.set(skill, skillCount + 1);
+      patternCounts.set(pattern, patternCount + 1);
+    }
+  });
+  const selectedIds = new Set(selected.map((question) => question.id));
+  const fill = [...Array.from(uniqueByPrompt.values()), ...shuffled].filter((question) => !selectedIds.has(question.id));
+  return (selected.length >= sessionSize ? selected : [...selected, ...fill]).slice(0, sessionSize);
 }
 
 assert(questions.length === 500, `Expected 500 questions, found ${questions.length}.`);
@@ -170,14 +180,25 @@ for (const question of questions) {
 for (const subject of subjects) {
   const pool = questions.filter((question) => question.subject === subject);
   const uniquePrompts = new Set(pool.map((question) => question.question));
+  const uniquePatterns = new Set(pool.map(normalizePattern));
   assert(pool.length === 125, `${subject} should have 125 questions.`);
   assert(uniquePrompts.size >= sessionSize, `${subject} needs enough unique prompts for a session.`);
+  if (subject === "Science") {
+    assert(uniquePatterns.size >= sessionSize, `${subject} needs enough unique patterns for a session.`);
+  }
 
-  for (let run = 0; run < 250; run += 1) {
-    const session = pickSession(pool);
-    const promptKeys = session.map((question) => question.question);
-    assert(new Set(promptKeys).size === session.length, `${subject} session repeated a prompt.`);
+  for (let run = 0; run < 300; run += 1) {
+    const session = pickSession(pool, subject);
+    assert(session.length === sessionSize, `${subject} session could not reach 15 varied questions.`);
+    assert(new Set(session.map((question) => question.question)).size === session.length, `${subject} session repeated a prompt.`);
+    if (subject === "Science") {
+      assert(new Set(session.map(normalizePattern)).size === session.length, `${subject} session repeated a pattern.`);
+      assert(new Set(session.map((question) => question.skill)).size === session.length, "Science session repeated a skill.");
+    }
   }
 }
+
+const personalized = questions.filter((question) => familyNames.some((name) => question.question.includes(name)));
+assert(personalized.length >= 120, "Expected broad family-name personalization across question banks.");
 
 console.log("Question QC passed.");

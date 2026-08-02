@@ -403,14 +403,16 @@
 
 .answer {
   display: inline-flex;
-  min-height: 92px;
+  min-height: 106px;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 16px;
+  padding: 18px 20px;
   border-radius: 22px;
   color: #fff;
-  font-size: clamp(1.4rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.6vw, 3rem);
+  line-height: 1.05;
+  font-weight: 950;
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.13);
   box-shadow: inset 0 -7px 0 rgba(0, 0, 0, 0.1), 0 8px 16px rgba(39, 72, 110, 0.16);
 }
@@ -445,7 +447,7 @@
 }
 
 .lesson-box {
-  min-height: 82px;
+  min-height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -454,6 +456,44 @@
   color: #2e4565;
   font-size: 1.08rem;
   font-weight: 700;
+}
+
+.lesson-box.correct-feedback,
+.lesson-box.wrong-feedback {
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-radius: 22px;
+}
+
+.lesson-box.correct-feedback {
+  color: #136f2d;
+  background: #e9fbef;
+  box-shadow: inset 0 0 0 3px rgba(53, 190, 69, 0.18);
+}
+
+.lesson-box.wrong-feedback {
+  color: #963149;
+  background: #fff0f4;
+  box-shadow: inset 0 0 0 3px rgba(248, 66, 120, 0.16);
+}
+
+.feedback-copy {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+}
+
+.feedback-copy strong {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1;
+}
+
+.feedback-copy p {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.35;
 }
 
 .hint-button,
@@ -882,7 +922,8 @@
   }
 
   .answer {
-    min-height: 74px;
+    min-height: 88px;
+    font-size: clamp(1.7rem, 8vw, 2.6rem);
   }
 
   .lesson-box {

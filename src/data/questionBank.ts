@@ -75,7 +75,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 12 pages in the morning and 8 pages later. How many pages did she read?",
+    "question": "Sahir read 12 pages and Vaibhav read 8 pages. How many pages did they read in all?",
     "choices": [
       "19",
       "22",
@@ -92,7 +92,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 20 crayons. She gave away 8. How many crayons are left?",
+    "question": "Vaibhav had 20 crayons. Vaibhav gave 8 crayons to Nitisha. How many crayons are left?",
     "choices": [
       "11",
       "15",
@@ -194,7 +194,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 7 pages in the morning and 6 pages later. How many pages did she read?",
+    "question": "Samaira read 7 pages and Sahir read 6 pages. How many pages did they read in all?",
     "choices": [
       "13",
       "12",
@@ -211,7 +211,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 26 crayons. She gave away 7. How many crayons are left?",
+    "question": "Sahir had 26 crayons. Sahir gave 7 crayons to Vaibhav. How many crayons are left?",
     "choices": [
       "20",
       "18",
@@ -313,7 +313,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 14 pages in the morning and 4 pages later. How many pages did she read?",
+    "question": "Nitisha read 14 pages and Samaira read 4 pages. How many pages did they read in all?",
     "choices": [
       "22",
       "18",
@@ -330,7 +330,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 18 crayons. She gave away 6. How many crayons are left?",
+    "question": "Samaira had 18 crayons. Samaira gave 6 crayons to Sahir. How many crayons are left?",
     "choices": [
       "12",
       "13",
@@ -432,7 +432,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 9 pages in the morning and 11 pages later. How many pages did she read?",
+    "question": "Vaibhav read 9 pages and Nitisha read 11 pages. How many pages did they read in all?",
     "choices": [
       "22",
       "24",
@@ -449,7 +449,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 24 crayons. She gave away 5. How many crayons are left?",
+    "question": "Nitisha had 24 crayons. Nitisha gave 5 crayons to Samaira. How many crayons are left?",
     "choices": [
       "22",
       "19",
@@ -551,7 +551,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 16 pages in the morning and 9 pages later. How many pages did she read?",
+    "question": "Sahir read 16 pages and Vaibhav read 9 pages. How many pages did they read in all?",
     "choices": [
       "24",
       "27",
@@ -568,7 +568,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 16 crayons. She gave away 4. How many crayons are left?",
+    "question": "Vaibhav had 16 crayons. Vaibhav gave 4 crayons to Nitisha. How many crayons are left?",
     "choices": [
       "11",
       "15",
@@ -670,7 +670,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 11 pages in the morning and 7 pages later. How many pages did she read?",
+    "question": "Samaira read 11 pages and Sahir read 7 pages. How many pages did they read in all?",
     "choices": [
       "18",
       "17",
@@ -687,7 +687,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 22 crayons. She gave away 3. How many crayons are left?",
+    "question": "Sahir had 22 crayons. Sahir gave 3 crayons to Vaibhav. How many crayons are left?",
     "choices": [
       "20",
       "18",
@@ -789,7 +789,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 18 pages in the morning and 5 pages later. How many pages did she read?",
+    "question": "Nitisha read 18 pages and Samaira read 5 pages. How many pages did they read in all?",
     "choices": [
       "27",
       "23",
@@ -806,7 +806,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 14 crayons. She gave away 2. How many crayons are left?",
+    "question": "Samaira had 14 crayons. Samaira gave 2 crayons to Sahir. How many crayons are left?",
     "choices": [
       "12",
       "13",
@@ -908,7 +908,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 13 pages in the morning and 3 pages later. How many pages did she read?",
+    "question": "Vaibhav read 13 pages and Nitisha read 3 pages. How many pages did they read in all?",
     "choices": [
       "18",
       "20",
@@ -925,7 +925,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 28 crayons. She gave away 9. How many crayons are left?",
+    "question": "Nitisha had 28 crayons. Nitisha gave 9 crayons to Samaira. How many crayons are left?",
     "choices": [
       "22",
       "19",
@@ -1027,7 +1027,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 8 pages in the morning and 10 pages later. How many pages did she read?",
+    "question": "Sahir read 8 pages and Vaibhav read 10 pages. How many pages did they read in all?",
     "choices": [
       "17",
       "20",
@@ -1044,7 +1044,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 20 crayons. She gave away 8. How many crayons are left?",
+    "question": "Vaibhav had 20 crayons. Vaibhav gave 8 crayons to Nitisha. How many crayons are left?",
     "choices": [
       "11",
       "15",
@@ -1146,7 +1146,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 15 pages in the morning and 8 pages later. How many pages did she read?",
+    "question": "Samaira read 15 pages and Sahir read 8 pages. How many pages did they read in all?",
     "choices": [
       "23",
       "22",
@@ -1163,7 +1163,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 26 crayons. She gave away 7. How many crayons are left?",
+    "question": "Sahir had 26 crayons. Sahir gave 7 crayons to Vaibhav. How many crayons are left?",
     "choices": [
       "20",
       "18",
@@ -1265,7 +1265,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 10 pages in the morning and 6 pages later. How many pages did she read?",
+    "question": "Nitisha read 10 pages and Samaira read 6 pages. How many pages did they read in all?",
     "choices": [
       "20",
       "16",
@@ -1282,7 +1282,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 18 crayons. She gave away 6. How many crayons are left?",
+    "question": "Samaira had 18 crayons. Samaira gave 6 crayons to Sahir. How many crayons are left?",
     "choices": [
       "12",
       "13",
@@ -1384,7 +1384,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 17 pages in the morning and 4 pages later. How many pages did she read?",
+    "question": "Vaibhav read 17 pages and Nitisha read 4 pages. How many pages did they read in all?",
     "choices": [
       "23",
       "25",
@@ -1401,7 +1401,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 24 crayons. She gave away 5. How many crayons are left?",
+    "question": "Nitisha had 24 crayons. Nitisha gave 5 crayons to Samaira. How many crayons are left?",
     "choices": [
       "22",
       "19",
@@ -1503,7 +1503,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 12 pages in the morning and 11 pages later. How many pages did she read?",
+    "question": "Sahir read 12 pages and Vaibhav read 11 pages. How many pages did they read in all?",
     "choices": [
       "22",
       "25",
@@ -1520,7 +1520,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 16 crayons. She gave away 4. How many crayons are left?",
+    "question": "Vaibhav had 16 crayons. Vaibhav gave 4 crayons to Nitisha. How many crayons are left?",
     "choices": [
       "11",
       "15",
@@ -1622,7 +1622,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 7 pages in the morning and 9 pages later. How many pages did she read?",
+    "question": "Samaira read 7 pages and Sahir read 9 pages. How many pages did they read in all?",
     "choices": [
       "16",
       "15",
@@ -1639,7 +1639,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 22 crayons. She gave away 3. How many crayons are left?",
+    "question": "Sahir had 22 crayons. Sahir gave 3 crayons to Vaibhav. How many crayons are left?",
     "choices": [
       "20",
       "18",
@@ -1741,7 +1741,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 14 pages in the morning and 7 pages later. How many pages did she read?",
+    "question": "Nitisha read 14 pages and Samaira read 7 pages. How many pages did they read in all?",
     "choices": [
       "25",
       "21",
@@ -1758,7 +1758,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 14 crayons. She gave away 2. How many crayons are left?",
+    "question": "Samaira had 14 crayons. Samaira gave 2 crayons to Sahir. How many crayons are left?",
     "choices": [
       "12",
       "13",
@@ -1860,7 +1860,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 9 pages in the morning and 5 pages later. How many pages did she read?",
+    "question": "Vaibhav read 9 pages and Nitisha read 5 pages. How many pages did they read in all?",
     "choices": [
       "16",
       "18",
@@ -1877,7 +1877,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 28 crayons. She gave away 9. How many crayons are left?",
+    "question": "Nitisha had 28 crayons. Nitisha gave 9 crayons to Samaira. How many crayons are left?",
     "choices": [
       "22",
       "19",
@@ -1979,7 +1979,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 16 pages in the morning and 3 pages later. How many pages did she read?",
+    "question": "Sahir read 16 pages and Vaibhav read 3 pages. How many pages did they read in all?",
     "choices": [
       "18",
       "21",
@@ -1996,7 +1996,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 20 crayons. She gave away 8. How many crayons are left?",
+    "question": "Vaibhav had 20 crayons. Vaibhav gave 8 crayons to Nitisha. How many crayons are left?",
     "choices": [
       "11",
       "15",
@@ -2098,7 +2098,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "addition-word-problems",
-    "question": "Samaira read 11 pages in the morning and 10 pages later. How many pages did she read?",
+    "question": "Samaira read 11 pages and Sahir read 10 pages. How many pages did they read in all?",
     "choices": [
       "21",
       "20",
@@ -2115,7 +2115,7 @@ export const starterQuestions: Question[] = [
     "subject": "Math",
     "source": "starter",
     "skill": "subtraction-word-problems",
-    "question": "Samaira had 26 crayons. She gave away 7. How many crayons are left?",
+    "question": "Sahir had 26 crayons. Sahir gave 7 crayons to Vaibhav. How many crayons are left?",
     "choices": [
       "20",
       "18",
@@ -2183,7 +2183,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Max practiced tying his shoes every morning. On Friday, he tied them without help.\" What lesson does the story teach?",
+    "question": "Read: \"Samaira practiced tying her shoes every morning. On Friday, she tied them without help.\" What lesson does the story teach?",
     "choices": [
       "Practice helps you improve",
       "Shoes should stay untied",
@@ -2192,7 +2192,7 @@ export const starterQuestions: Question[] = [
     ],
     "answerIndex": 0,
     "hint": "Think about what changed after practice.",
-    "explanation": "Max improved because he practiced."
+    "explanation": "Samaira improved because she practiced."
   },
   {
     "id": "g2-reading-005",
@@ -2219,14 +2219,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "My sister packed lunch.",
+      "Nitisha packed lunch.",
       "After the bell.",
       "Jumped over.",
       "With a red hat."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"My sister packed lunch.\" is a complete sentence."
+    "explanation": "\"Nitisha packed lunch.\" is a complete sentence."
   },
   {
     "id": "g2-reading-007",
@@ -2251,16 +2251,16 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Nia heard thunder. She put on her raincoat before she walked outside.\" Why did Nia put on a raincoat?",
+    "question": "Read: \"Vaibhav heard thunder. He put on his raincoat before he walked outside.\" Why did Vaibhav put on a raincoat?",
     "choices": [
-      "She thought it might rain",
-      "She wanted to swim",
-      "She was going to bed",
-      "She had a sunburn"
+      "He thought it might rain",
+      "He wanted to swim",
+      "He was going to bed",
+      "He had a sunburn"
     ],
     "answerIndex": 0,
     "hint": "Thunder can be a clue about weather.",
-    "explanation": "Nia heard thunder, so she thought it might rain."
+    "explanation": "Vaibhav heard thunder, so he thought it might rain."
   },
   {
     "id": "g2-reading-009",
@@ -2319,16 +2319,16 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"The class made a paper chain. Each child added one link. The chain got longer and longer.\" What is the main idea?",
+    "question": "Read: \"Samaira and Sahir made a paper chain. Each person added one link. The chain got longer and longer.\" What is the main idea?",
     "choices": [
-      "The class made a chain together",
-      "The class ate apples",
+      "They made a chain together",
+      "They ate apples",
       "One child went home",
       "The paper was lost"
     ],
     "answerIndex": 0,
     "hint": "Choose the answer that tells what the whole story is about.",
-    "explanation": "The passage is mostly about the class making a paper chain together."
+    "explanation": "The passage is mostly about Samaira and Sahir making a paper chain together."
   },
   {
     "id": "g2-reading-013",
@@ -2387,7 +2387,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Omar forgot his lunch. His friend shared a sandwich. Omar smiled and said thank you.\" How did Omar's friend help?",
+    "question": "Read: \"Sahir forgot his lunch. Nitisha shared a sandwich. Sahir smiled and said thank you.\" How did Nitisha help?",
     "choices": [
       "Shared a sandwich",
       "Took his pencil",
@@ -2395,8 +2395,8 @@ export const starterQuestions: Question[] = [
       "Drew a map"
     ],
     "answerIndex": 0,
-    "hint": "A friend helped with lunch.",
-    "explanation": "Omar's friend shared a sandwich with him."
+    "hint": "A family member helped with lunch.",
+    "explanation": "Nitisha shared a sandwich with Sahir."
   },
   {
     "id": "g2-reading-017",
@@ -2423,14 +2423,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "Dad watered the garden.",
+      "Vaibhav watered the garden.",
       "Across the street.",
       "Very quickly.",
       "When the."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"Dad watered the garden.\" is a complete sentence."
+    "explanation": "\"Vaibhav watered the garden.\" is a complete sentence."
   },
   {
     "id": "g2-reading-019",
@@ -2455,7 +2455,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava saved a soft scarf. Then Ava smiled.\" What did Ava saved?",
+    "question": "Read: \"Samaira went to the park. Samaira saved a soft scarf. Then Samaira smiled.\" What did Samaira saved?",
     "choices": [
       "soft scarf",
       "a lunch box",
@@ -2463,8 +2463,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava saved.",
-    "explanation": "The story says Ava saved a soft scarf."
+    "hint": "Look for what Samaira saved.",
+    "explanation": "The story says Samaira saved a soft scarf."
   },
   {
     "id": "g2-reading-021",
@@ -2523,7 +2523,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe saved a silver key. Then Zoe smiled.\" What did Zoe saved?",
+    "question": "Read: \"Ava went to the garden. Ava saved a silver key. Then Ava smiled.\" What did Ava saved?",
     "choices": [
       "silver key",
       "a lunch box",
@@ -2531,8 +2531,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe saved.",
-    "explanation": "The story says Zoe saved a silver key."
+    "hint": "Look for what Ava saved.",
+    "explanation": "The story says Ava saved a silver key."
   },
   {
     "id": "g2-reading-025",
@@ -2591,7 +2591,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Tara went to the kitchen. Tara counted a brown basket. Then Tara smiled.\" What did Tara counted?",
+    "question": "Read: \"Zoe went to the kitchen. Zoe counted a brown basket. Then Zoe smiled.\" What did Zoe counted?",
     "choices": [
       "brown basket",
       "a lunch box",
@@ -2599,8 +2599,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Tara counted.",
-    "explanation": "The story says Tara counted a brown basket."
+    "hint": "Look for what Zoe counted.",
+    "explanation": "The story says Zoe counted a brown basket."
   },
   {
     "id": "g2-reading-029",
@@ -2627,14 +2627,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "The small boat floated.",
+      "Sahir helped clean up.",
       "On the.",
       "Because it.",
       "With my friend."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"The small boat floated.\" is a complete sentence."
+    "explanation": "\"Sahir helped clean up.\" is a complete sentence."
   },
   {
     "id": "g2-reading-031",
@@ -2659,7 +2659,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Maya went to the porch. Maya packed a blue kite. Then Maya smiled.\" What did Maya packed?",
+    "question": "Read: \"Vaibhav went to the porch. Vaibhav packed a blue kite. Then Vaibhav smiled.\" What did Vaibhav packed?",
     "choices": [
       "blue kite",
       "a lunch box",
@@ -2667,8 +2667,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Maya packed.",
-    "explanation": "The story says Maya packed a blue kite."
+    "hint": "Look for what Vaibhav packed.",
+    "explanation": "The story says Vaibhav packed a blue kite."
   },
   {
     "id": "g2-reading-033",
@@ -2727,7 +2727,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ria went to the zoo. Ria painted a small shell. Then Ria smiled.\" What did Ria painted?",
+    "question": "Read: \"Maya went to the zoo. Maya painted a small shell. Then Maya smiled.\" What did Maya painted?",
     "choices": [
       "small shell",
       "a lunch box",
@@ -2735,8 +2735,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ria painted.",
-    "explanation": "The story says Ria painted a small shell."
+    "hint": "Look for what Maya painted.",
+    "explanation": "The story says Maya painted a small shell."
   },
   {
     "id": "g2-reading-037",
@@ -2763,14 +2763,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "My sister packed lunch.",
+      "Nitisha packed lunch.",
       "After the bell.",
       "Jumped over.",
       "With a red hat."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"My sister packed lunch.\" is a complete sentence."
+    "explanation": "\"Nitisha packed lunch.\" is a complete sentence."
   },
   {
     "id": "g2-reading-039",
@@ -2795,7 +2795,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava fixed a yellow cup. Then Ava smiled.\" What did Ava fixed?",
+    "question": "Read: \"Samaira went to the park. Samaira fixed a yellow cup. Then Samaira smiled.\" What did Samaira fixed?",
     "choices": [
       "yellow cup",
       "a lunch box",
@@ -2803,8 +2803,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava fixed.",
-    "explanation": "The story says Ava fixed a yellow cup."
+    "hint": "Look for what Samaira fixed.",
+    "explanation": "The story says Samaira fixed a yellow cup."
   },
   {
     "id": "g2-reading-041",
@@ -2863,7 +2863,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe fixed a green leaf. Then Zoe smiled.\" What did Zoe fixed?",
+    "question": "Read: \"Ava went to the garden. Ava fixed a green leaf. Then Ava smiled.\" What did Ava fixed?",
     "choices": [
       "green leaf",
       "a lunch box",
@@ -2871,8 +2871,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe fixed.",
-    "explanation": "The story says Zoe fixed a green leaf."
+    "hint": "Look for what Ava fixed.",
+    "explanation": "The story says Ava fixed a green leaf."
   },
   {
     "id": "g2-reading-045",
@@ -2931,7 +2931,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Tara went to the kitchen. Tara sorted a soft scarf. Then Tara smiled.\" What did Tara sorted?",
+    "question": "Read: \"Zoe went to the kitchen. Zoe sorted a soft scarf. Then Zoe smiled.\" What did Zoe sorted?",
     "choices": [
       "soft scarf",
       "a lunch box",
@@ -2939,8 +2939,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Tara sorted.",
-    "explanation": "The story says Tara sorted a soft scarf."
+    "hint": "Look for what Zoe sorted.",
+    "explanation": "The story says Zoe sorted a soft scarf."
   },
   {
     "id": "g2-reading-049",
@@ -2967,14 +2967,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "Dad watered the garden.",
+      "Vaibhav watered the garden.",
       "Across the street.",
       "Very quickly.",
       "When the."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"Dad watered the garden.\" is a complete sentence."
+    "explanation": "\"Vaibhav watered the garden.\" is a complete sentence."
   },
   {
     "id": "g2-reading-051",
@@ -2999,7 +2999,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Maya went to the porch. Maya found a tiny seed. Then Maya smiled.\" What did Maya found?",
+    "question": "Read: \"Vaibhav went to the porch. Vaibhav found a tiny seed. Then Vaibhav smiled.\" What did Vaibhav found?",
     "choices": [
       "tiny seed",
       "a lunch box",
@@ -3007,8 +3007,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Maya found.",
-    "explanation": "The story says Maya found a tiny seed."
+    "hint": "Look for what Vaibhav found.",
+    "explanation": "The story says Vaibhav found a tiny seed."
   },
   {
     "id": "g2-reading-053",
@@ -3067,7 +3067,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ria went to the zoo. Ria carried a silver key. Then Ria smiled.\" What did Ria carried?",
+    "question": "Read: \"Maya went to the zoo. Maya carried a silver key. Then Maya smiled.\" What did Maya carried?",
     "choices": [
       "silver key",
       "a lunch box",
@@ -3075,8 +3075,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ria carried.",
-    "explanation": "The story says Ria carried a silver key."
+    "hint": "Look for what Maya carried.",
+    "explanation": "The story says Maya carried a silver key."
   },
   {
     "id": "g2-reading-057",
@@ -3135,7 +3135,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava shared a blue kite. Then Ava smiled.\" What did Ava shared?",
+    "question": "Read: \"Samaira went to the park. Samaira shared a blue kite. Then Samaira smiled.\" What did Samaira shared?",
     "choices": [
       "blue kite",
       "a lunch box",
@@ -3143,8 +3143,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava shared.",
-    "explanation": "The story says Ava shared a blue kite."
+    "hint": "Look for what Samaira shared.",
+    "explanation": "The story says Samaira shared a blue kite."
   },
   {
     "id": "g2-reading-061",
@@ -3171,14 +3171,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "The small boat floated.",
+      "Sahir helped clean up.",
       "On the.",
       "Because it.",
       "With my friend."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"The small boat floated.\" is a complete sentence."
+    "explanation": "\"Sahir helped clean up.\" is a complete sentence."
   },
   {
     "id": "g2-reading-063",
@@ -3203,7 +3203,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe shared a red book. Then Zoe smiled.\" What did Zoe shared?",
+    "question": "Read: \"Ava went to the garden. Ava shared a red book. Then Ava smiled.\" What did Ava shared?",
     "choices": [
       "red book",
       "a lunch box",
@@ -3211,8 +3211,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe shared.",
-    "explanation": "The story says Zoe shared a red book."
+    "hint": "Look for what Ava shared.",
+    "explanation": "The story says Ava shared a red book."
   },
   {
     "id": "g2-reading-065",
@@ -3271,7 +3271,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Tara went to the kitchen. Tara washed a small shell. Then Tara smiled.\" What did Tara washed?",
+    "question": "Read: \"Zoe went to the kitchen. Zoe washed a small shell. Then Zoe smiled.\" What did Zoe washed?",
     "choices": [
       "small shell",
       "a lunch box",
@@ -3279,8 +3279,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Tara washed.",
-    "explanation": "The story says Tara washed a small shell."
+    "hint": "Look for what Zoe washed.",
+    "explanation": "The story says Zoe washed a small shell."
   },
   {
     "id": "g2-reading-069",
@@ -3307,14 +3307,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "My sister packed lunch.",
+      "Nitisha packed lunch.",
       "After the bell.",
       "Jumped over.",
       "With a red hat."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"My sister packed lunch.\" is a complete sentence."
+    "explanation": "\"Nitisha packed lunch.\" is a complete sentence."
   },
   {
     "id": "g2-reading-071",
@@ -3339,7 +3339,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Maya went to the porch. Maya saved a green leaf. Then Maya smiled.\" What did Maya saved?",
+    "question": "Read: \"Vaibhav went to the porch. Vaibhav saved a green leaf. Then Vaibhav smiled.\" What did Vaibhav saved?",
     "choices": [
       "green leaf",
       "a lunch box",
@@ -3347,8 +3347,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Maya saved.",
-    "explanation": "The story says Maya saved a green leaf."
+    "hint": "Look for what Vaibhav saved.",
+    "explanation": "The story says Vaibhav saved a green leaf."
   },
   {
     "id": "g2-reading-073",
@@ -3407,7 +3407,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ria went to the zoo. Ria counted a paper star. Then Ria smiled.\" What did Ria counted?",
+    "question": "Read: \"Maya went to the zoo. Maya counted a paper star. Then Maya smiled.\" What did Maya counted?",
     "choices": [
       "paper star",
       "a lunch box",
@@ -3415,8 +3415,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ria counted.",
-    "explanation": "The story says Ria counted a paper star."
+    "hint": "Look for what Maya counted.",
+    "explanation": "The story says Maya counted a paper star."
   },
   {
     "id": "g2-reading-077",
@@ -3475,7 +3475,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava packed a soft scarf. Then Ava smiled.\" What did Ava packed?",
+    "question": "Read: \"Samaira went to the park. Samaira packed a soft scarf. Then Samaira smiled.\" What did Samaira packed?",
     "choices": [
       "soft scarf",
       "a lunch box",
@@ -3483,8 +3483,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava packed.",
-    "explanation": "The story says Ava packed a soft scarf."
+    "hint": "Look for what Samaira packed.",
+    "explanation": "The story says Samaira packed a soft scarf."
   },
   {
     "id": "g2-reading-081",
@@ -3511,14 +3511,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "Dad watered the garden.",
+      "Vaibhav watered the garden.",
       "Across the street.",
       "Very quickly.",
       "When the."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"Dad watered the garden.\" is a complete sentence."
+    "explanation": "\"Vaibhav watered the garden.\" is a complete sentence."
   },
   {
     "id": "g2-reading-083",
@@ -3543,7 +3543,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe packed a silver key. Then Zoe smiled.\" What did Zoe packed?",
+    "question": "Read: \"Ava went to the garden. Ava packed a silver key. Then Ava smiled.\" What did Ava packed?",
     "choices": [
       "silver key",
       "a lunch box",
@@ -3551,8 +3551,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe packed.",
-    "explanation": "The story says Zoe packed a silver key."
+    "hint": "Look for what Ava packed.",
+    "explanation": "The story says Ava packed a silver key."
   },
   {
     "id": "g2-reading-085",
@@ -3611,7 +3611,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Tara went to the kitchen. Tara painted a brown basket. Then Tara smiled.\" What did Tara painted?",
+    "question": "Read: \"Zoe went to the kitchen. Zoe painted a brown basket. Then Zoe smiled.\" What did Zoe painted?",
     "choices": [
       "brown basket",
       "a lunch box",
@@ -3619,8 +3619,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Tara painted.",
-    "explanation": "The story says Tara painted a brown basket."
+    "hint": "Look for what Zoe painted.",
+    "explanation": "The story says Zoe painted a brown basket."
   },
   {
     "id": "g2-reading-089",
@@ -3679,7 +3679,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Maya went to the porch. Maya fixed a blue kite. Then Maya smiled.\" What did Maya fixed?",
+    "question": "Read: \"Vaibhav went to the porch. Vaibhav fixed a blue kite. Then Vaibhav smiled.\" What did Vaibhav fixed?",
     "choices": [
       "blue kite",
       "a lunch box",
@@ -3687,8 +3687,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Maya fixed.",
-    "explanation": "The story says Maya fixed a blue kite."
+    "hint": "Look for what Vaibhav fixed.",
+    "explanation": "The story says Vaibhav fixed a blue kite."
   },
   {
     "id": "g2-reading-093",
@@ -3715,14 +3715,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "The small boat floated.",
+      "Sahir helped clean up.",
       "On the.",
       "Because it.",
       "With my friend."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"The small boat floated.\" is a complete sentence."
+    "explanation": "\"Sahir helped clean up.\" is a complete sentence."
   },
   {
     "id": "g2-reading-095",
@@ -3747,7 +3747,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ria went to the zoo. Ria sorted a small shell. Then Ria smiled.\" What did Ria sorted?",
+    "question": "Read: \"Maya went to the zoo. Maya sorted a small shell. Then Maya smiled.\" What did Maya sorted?",
     "choices": [
       "small shell",
       "a lunch box",
@@ -3755,8 +3755,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ria sorted.",
-    "explanation": "The story says Ria sorted a small shell."
+    "hint": "Look for what Maya sorted.",
+    "explanation": "The story says Maya sorted a small shell."
   },
   {
     "id": "g2-reading-097",
@@ -3815,7 +3815,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava found a yellow cup. Then Ava smiled.\" What did Ava found?",
+    "question": "Read: \"Samaira went to the park. Samaira found a yellow cup. Then Samaira smiled.\" What did Samaira found?",
     "choices": [
       "yellow cup",
       "a lunch box",
@@ -3823,8 +3823,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava found.",
-    "explanation": "The story says Ava found a yellow cup."
+    "hint": "Look for what Samaira found.",
+    "explanation": "The story says Samaira found a yellow cup."
   },
   {
     "id": "g2-reading-101",
@@ -3851,14 +3851,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "My sister packed lunch.",
+      "Nitisha packed lunch.",
       "After the bell.",
       "Jumped over.",
       "With a red hat."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"My sister packed lunch.\" is a complete sentence."
+    "explanation": "\"Nitisha packed lunch.\" is a complete sentence."
   },
   {
     "id": "g2-reading-103",
@@ -3883,7 +3883,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe found a green leaf. Then Zoe smiled.\" What did Zoe found?",
+    "question": "Read: \"Ava went to the garden. Ava found a green leaf. Then Ava smiled.\" What did Ava found?",
     "choices": [
       "green leaf",
       "a lunch box",
@@ -3891,8 +3891,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe found.",
-    "explanation": "The story says Zoe found a green leaf."
+    "hint": "Look for what Ava found.",
+    "explanation": "The story says Ava found a green leaf."
   },
   {
     "id": "g2-reading-105",
@@ -3951,7 +3951,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Tara went to the kitchen. Tara carried a soft scarf. Then Tara smiled.\" What did Tara carried?",
+    "question": "Read: \"Zoe went to the kitchen. Zoe carried a soft scarf. Then Zoe smiled.\" What did Zoe carried?",
     "choices": [
       "soft scarf",
       "a lunch box",
@@ -3959,8 +3959,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Tara carried.",
-    "explanation": "The story says Tara carried a soft scarf."
+    "hint": "Look for what Zoe carried.",
+    "explanation": "The story says Zoe carried a soft scarf."
   },
   {
     "id": "g2-reading-109",
@@ -4019,7 +4019,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Maya went to the porch. Maya shared a tiny seed. Then Maya smiled.\" What did Maya shared?",
+    "question": "Read: \"Vaibhav went to the porch. Vaibhav shared a tiny seed. Then Vaibhav smiled.\" What did Vaibhav shared?",
     "choices": [
       "tiny seed",
       "a lunch box",
@@ -4027,8 +4027,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Maya shared.",
-    "explanation": "The story says Maya shared a tiny seed."
+    "hint": "Look for what Vaibhav shared.",
+    "explanation": "The story says Vaibhav shared a tiny seed."
   },
   {
     "id": "g2-reading-113",
@@ -4055,14 +4055,14 @@ export const starterQuestions: Question[] = [
     "skill": "sentence-meaning",
     "question": "Which sentence is complete?",
     "choices": [
-      "Dad watered the garden.",
+      "Vaibhav watered the garden.",
       "Across the street.",
       "Very quickly.",
       "When the."
     ],
     "answerIndex": 0,
     "hint": "A complete sentence tells a full idea.",
-    "explanation": "\"Dad watered the garden.\" is a complete sentence."
+    "explanation": "\"Vaibhav watered the garden.\" is a complete sentence."
   },
   {
     "id": "g2-reading-115",
@@ -4087,7 +4087,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ria went to the zoo. Ria washed a silver key. Then Ria smiled.\" What did Ria washed?",
+    "question": "Read: \"Maya went to the zoo. Maya washed a silver key. Then Maya smiled.\" What did Maya washed?",
     "choices": [
       "silver key",
       "a lunch box",
@@ -4095,8 +4095,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ria washed.",
-    "explanation": "The story says Ria washed a silver key."
+    "hint": "Look for what Maya washed.",
+    "explanation": "The story says Maya washed a silver key."
   },
   {
     "id": "g2-reading-117",
@@ -4155,7 +4155,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Ava went to the park. Ava saved a blue kite. Then Ava smiled.\" What did Ava saved?",
+    "question": "Read: \"Samaira went to the park. Samaira saved a blue kite. Then Samaira smiled.\" What did Samaira saved?",
     "choices": [
       "blue kite",
       "a lunch box",
@@ -4163,8 +4163,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Ava saved.",
-    "explanation": "The story says Ava saved a blue kite."
+    "hint": "Look for what Samaira saved.",
+    "explanation": "The story says Samaira saved a blue kite."
   },
   {
     "id": "g2-reading-121",
@@ -4223,7 +4223,7 @@ export const starterQuestions: Question[] = [
     "subject": "Reading",
     "source": "starter",
     "skill": "reading-comprehension",
-    "question": "Read: \"Zoe went to the garden. Zoe saved a red book. Then Zoe smiled.\" What did Zoe saved?",
+    "question": "Read: \"Ava went to the garden. Ava saved a red book. Then Ava smiled.\" What did Ava saved?",
     "choices": [
       "red book",
       "a lunch box",
@@ -4231,8 +4231,8 @@ export const starterQuestions: Question[] = [
       "a toy truck"
     ],
     "answerIndex": 0,
-    "hint": "Look for what Zoe saved.",
-    "explanation": "The story says Zoe saved a red book."
+    "hint": "Look for what Ava saved.",
+    "explanation": "The story says Ava saved a red book."
   },
   {
     "id": "g2-reading-125",
@@ -4256,15 +4256,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "magnets",
     "question": "Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
@@ -4273,15 +4273,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "animal-life-cycles",
     "question": "What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
@@ -4290,15 +4290,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "weather",
     "question": "Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
@@ -4307,7 +4307,7 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "body-systems",
     "question": "What do lungs help you do?",
     "choices": [
       "Breathe",
@@ -4324,15 +4324,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "materials",
     "question": "Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
@@ -4341,15 +4341,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "matter",
     "question": "What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
@@ -4358,15 +4358,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "animal-groups",
     "question": "Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
@@ -4375,7 +4375,7 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "plant-parts",
     "question": "Which part of a plant takes in water?",
     "choices": [
       "Roots",
@@ -4392,15 +4392,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "animal-needs",
     "question": "What do animals need to live?",
     "choices": [
-      "Food and water",
       "Glue and paper",
       "Shoes and hats",
-      "Books and crayons"
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "Think about basic needs.",
     "explanation": "Animals need food, water, air, and shelter."
   },
@@ -4409,15 +4409,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "tools",
     "question": "Which tool can measure how hot or cold something is?",
     "choices": [
-      "Thermometer",
-      "Ruler",
       "Clock",
-      "Compass"
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It uses degrees.",
     "explanation": "A thermometer measures temperature."
   },
@@ -4426,15 +4426,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
+    "skill": "habitats",
     "question": "What is a habitat?",
     "choices": [
+      "A type of shoe",
       "A place where an animal lives",
       "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "A school supply"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Animals find food and shelter there.",
     "explanation": "A habitat is a place where an animal lives."
   },
@@ -4443,416 +4443,348 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What does a seed grow into?",
+    "skill": "senses",
+    "question": "Which sense helps Samaira hear music?",
     "choices": [
-      "Plant",
-      "Rock",
-      "Cloud",
-      "Spoon"
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
     ],
     "answerIndex": 0,
-    "hint": "A seed can sprout.",
-    "explanation": "A seed can grow into a plant."
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
   },
   {
     "id": "g2-science-013",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which object is pulled by a magnet?",
+    "skill": "earth",
+    "question": "What gives Earth light during the day?",
     "choices": [
-      "Paper clip",
-      "Apple",
-      "Crayon",
-      "Leaf"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "It is made of metal.",
-    "explanation": "A paper clip can be pulled by a magnet."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-014",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a baby frog called?",
+    "skill": "sound",
+    "question": "What makes sound when it vibrates?",
     "choices": [
-      "Tadpole",
-      "Kitten",
-      "Calf",
-      "Chick"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "It swims before it grows legs.",
-    "explanation": "A baby frog is called a tadpole."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-015",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which weather has water falling from clouds?",
+    "skill": "water-cycle",
+    "question": "What can clouds bring to the ground?",
     "choices": [
+      "Shoes",
       "Rain",
-      "Sunny",
-      "Windy",
-      "Foggy"
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "You may use an umbrella.",
-    "explanation": "Rain is water falling from clouds."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-016",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do lungs help you do?",
+    "skill": "plants",
+    "question": "Sahir is learning science. What does a seed grow into?",
     "choices": [
-      "Breathe",
-      "Draw",
-      "Jump",
-      "Taste"
+      "Plant",
+      "Rock",
+      "Cloud",
+      "Spoon"
     ],
     "answerIndex": 0,
-    "hint": "You use them when you inhale.",
-    "explanation": "Lungs help us breathe."
+    "hint": "A seed can sprout.",
+    "explanation": "A seed can grow into a plant."
   },
   {
     "id": "g2-science-017",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which material is clear and used in windows?",
+    "skill": "magnets",
+    "question": "Sahir is learning science. Which object is pulled by a magnet?",
     "choices": [
-      "Glass",
-      "Wood",
-      "Cloth",
-      "Paper"
+      "Apple",
+      "Crayon",
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
-    "hint": "You can see through it.",
-    "explanation": "Glass is clear and used in windows."
+    "answerIndex": 3,
+    "hint": "It is made of metal.",
+    "explanation": "A paper clip can be pulled by a magnet."
   },
   {
     "id": "g2-science-018",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What happens to ice when it gets warm?",
+    "skill": "animal-life-cycles",
+    "question": "Sahir is learning science. What is a baby frog called?",
     "choices": [
-      "It melts",
-      "It sings",
-      "It grows fur",
-      "It turns into sand"
+      "Calf",
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
-    "hint": "Warmth changes it to liquid water.",
-    "explanation": "Ice melts into water when it gets warm."
+    "answerIndex": 2,
+    "hint": "It swims before it grows legs.",
+    "explanation": "A baby frog is called a tadpole."
   },
   {
     "id": "g2-science-019",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which animal group has scales and lays eggs?",
+    "skill": "weather",
+    "question": "Sahir is learning science. Which weather has water falling from clouds?",
     "choices": [
-      "Fish",
-      "Dogs",
-      "Birds",
-      "Horses"
+      "Foggy",
+      "Rain",
+      "Sunny",
+      "Windy"
     ],
-    "answerIndex": 0,
-    "hint": "Many of them swim.",
-    "explanation": "Fish have scales and lay eggs."
+    "answerIndex": 1,
+    "hint": "You may use an umbrella.",
+    "explanation": "Rain is water falling from clouds."
   },
   {
     "id": "g2-science-020",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which part of a plant takes in water?",
+    "skill": "body-systems",
+    "question": "Sahir is learning science. What do lungs help you do?",
     "choices": [
-      "Roots",
-      "Petals",
-      "Fruit",
-      "Stem"
+      "Breathe",
+      "Draw",
+      "Jump",
+      "Taste"
     ],
     "answerIndex": 0,
-    "hint": "This part is usually in soil.",
-    "explanation": "Roots take in water from soil."
+    "hint": "You use them when you inhale.",
+    "explanation": "Lungs help us breathe."
   },
   {
     "id": "g2-science-021",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do animals need to live?",
+    "skill": "materials",
+    "question": "Sahir is learning science. Which material is clear and used in windows?",
     "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
+      "Wood",
+      "Cloth",
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
+    "answerIndex": 3,
+    "hint": "You can see through it.",
+    "explanation": "Glass is clear and used in windows."
   },
   {
     "id": "g2-science-022",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which tool can measure how hot or cold something is?",
+    "skill": "matter",
+    "question": "Sahir is learning science. What happens to ice when it gets warm?",
     "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
+      "It grows fur",
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
+    "answerIndex": 2,
+    "hint": "Warmth changes it to liquid water.",
+    "explanation": "Ice melts into water when it gets warm."
   },
   {
     "id": "g2-science-023",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a habitat?",
+    "skill": "animal-groups",
+    "question": "Sahir is learning science. Which animal group has scales and lays eggs?",
     "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "Horses",
+      "Fish",
+      "Dogs",
+      "Birds"
     ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
+    "answerIndex": 1,
+    "hint": "Many of them swim.",
+    "explanation": "Fish have scales and lay eggs."
   },
   {
     "id": "g2-science-024",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What does a seed grow into?",
+    "skill": "plant-parts",
+    "question": "Sahir is learning science. Which part of a plant takes in water?",
     "choices": [
-      "Plant",
-      "Rock",
-      "Cloud",
-      "Spoon"
+      "Roots",
+      "Petals",
+      "Fruit",
+      "Stem"
     ],
     "answerIndex": 0,
-    "hint": "A seed can sprout.",
-    "explanation": "A seed can grow into a plant."
+    "hint": "This part is usually in soil.",
+    "explanation": "Roots take in water from soil."
   },
   {
     "id": "g2-science-025",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which object is pulled by a magnet?",
+    "skill": "animal-needs",
+    "question": "Sahir is learning science. What do animals need to live?",
     "choices": [
-      "Paper clip",
-      "Apple",
-      "Crayon",
-      "Leaf"
+      "Glue and paper",
+      "Shoes and hats",
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
-    "hint": "It is made of metal.",
-    "explanation": "A paper clip can be pulled by a magnet."
+    "answerIndex": 3,
+    "hint": "Think about basic needs.",
+    "explanation": "Animals need food, water, air, and shelter."
   },
   {
     "id": "g2-science-026",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What is a baby frog called?",
+    "skill": "tools",
+    "question": "Sahir is learning science. Which tool can measure how hot or cold something is?",
     "choices": [
-      "Tadpole",
-      "Kitten",
-      "Calf",
-      "Chick"
+      "Clock",
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
-    "hint": "It swims before it grows legs.",
-    "explanation": "A baby frog is called a tadpole."
+    "answerIndex": 2,
+    "hint": "It uses degrees.",
+    "explanation": "A thermometer measures temperature."
   },
   {
     "id": "g2-science-027",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which weather has water falling from clouds?",
+    "skill": "habitats",
+    "question": "Sahir is learning science. What is a habitat?",
     "choices": [
-      "Rain",
-      "Sunny",
-      "Windy",
-      "Foggy"
+      "A type of shoe",
+      "A place where an animal lives",
+      "A kind of snack",
+      "A school supply"
     ],
-    "answerIndex": 0,
-    "hint": "You may use an umbrella.",
-    "explanation": "Rain is water falling from clouds."
+    "answerIndex": 1,
+    "hint": "Animals find food and shelter there.",
+    "explanation": "A habitat is a place where an animal lives."
   },
   {
     "id": "g2-science-028",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What do lungs help you do?",
+    "skill": "senses",
+    "question": "Sahir is learning science. Which sense helps Samaira hear music?",
     "choices": [
-      "Breathe",
-      "Draw",
-      "Jump",
-      "Taste"
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
     ],
     "answerIndex": 0,
-    "hint": "You use them when you inhale.",
-    "explanation": "Lungs help us breathe."
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
   },
   {
     "id": "g2-science-029",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which material is clear and used in windows?",
+    "skill": "earth",
+    "question": "Sahir is learning science. What gives Earth light during the day?",
     "choices": [
-      "Glass",
-      "Wood",
-      "Cloth",
-      "Paper"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "You can see through it.",
-    "explanation": "Glass is clear and used in windows."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-030",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What happens to ice when it gets warm?",
+    "skill": "sound",
+    "question": "Sahir is learning science. What makes sound when it vibrates?",
     "choices": [
-      "It melts",
-      "It sings",
-      "It grows fur",
-      "It turns into sand"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "Warmth changes it to liquid water.",
-    "explanation": "Ice melts into water when it gets warm."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-031",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which animal group has scales and lays eggs?",
+    "skill": "water-cycle",
+    "question": "Sahir is learning science. What can clouds bring to the ground?",
     "choices": [
-      "Fish",
-      "Dogs",
-      "Birds",
-      "Horses"
+      "Shoes",
+      "Rain",
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "Many of them swim.",
-    "explanation": "Fish have scales and lay eggs."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-032",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which part of a plant takes in water?",
-    "choices": [
-      "Roots",
-      "Petals",
-      "Fruit",
-      "Stem"
-    ],
-    "answerIndex": 0,
-    "hint": "This part is usually in soil.",
-    "explanation": "Roots take in water from soil."
-  },
-  {
-    "id": "g2-science-033",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What do animals need to live?",
-    "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
-    ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
-  },
-  {
-    "id": "g2-science-034",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which tool can measure how hot or cold something is?",
-    "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
-    ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
-  },
-  {
-    "id": "g2-science-035",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What is a habitat?",
-    "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
-    ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
-  },
-  {
-    "id": "g2-science-036",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What does a seed grow into?",
+    "skill": "plants",
+    "question": "Vaibhav asks: What does a seed grow into?",
     "choices": [
       "Plant",
       "Rock",
@@ -4864,63 +4796,63 @@ export const starterQuestions: Question[] = [
     "explanation": "A seed can grow into a plant."
   },
   {
-    "id": "g2-science-037",
+    "id": "g2-science-033",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which object is pulled by a magnet?",
+    "skill": "magnets",
+    "question": "Vaibhav asks: Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
   {
-    "id": "g2-science-038",
+    "id": "g2-science-034",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What is a baby frog called?",
+    "skill": "animal-life-cycles",
+    "question": "Vaibhav asks: What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
   {
-    "id": "g2-science-039",
+    "id": "g2-science-035",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which weather has water falling from clouds?",
+    "skill": "weather",
+    "question": "Vaibhav asks: Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
   {
-    "id": "g2-science-040",
+    "id": "g2-science-036",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What do lungs help you do?",
+    "skill": "body-systems",
+    "question": "Vaibhav asks: What do lungs help you do?",
     "choices": [
       "Breathe",
       "Draw",
@@ -4932,63 +4864,63 @@ export const starterQuestions: Question[] = [
     "explanation": "Lungs help us breathe."
   },
   {
-    "id": "g2-science-041",
+    "id": "g2-science-037",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which material is clear and used in windows?",
+    "skill": "materials",
+    "question": "Vaibhav asks: Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
   {
-    "id": "g2-science-042",
+    "id": "g2-science-038",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What happens to ice when it gets warm?",
+    "skill": "matter",
+    "question": "Vaibhav asks: What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
   {
-    "id": "g2-science-043",
+    "id": "g2-science-039",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which animal group has scales and lays eggs?",
+    "skill": "animal-groups",
+    "question": "Vaibhav asks: Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
   {
-    "id": "g2-science-044",
+    "id": "g2-science-040",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which part of a plant takes in water?",
+    "skill": "plant-parts",
+    "question": "Vaibhav asks: Which part of a plant takes in water?",
     "choices": [
       "Roots",
       "Petals",
@@ -5000,63 +4932,131 @@ export const starterQuestions: Question[] = [
     "explanation": "Roots take in water from soil."
   },
   {
+    "id": "g2-science-041",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "animal-needs",
+    "question": "Vaibhav asks: What do animals need to live?",
+    "choices": [
+      "Glue and paper",
+      "Shoes and hats",
+      "Books and crayons",
+      "Food and water"
+    ],
+    "answerIndex": 3,
+    "hint": "Think about basic needs.",
+    "explanation": "Animals need food, water, air, and shelter."
+  },
+  {
+    "id": "g2-science-042",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "tools",
+    "question": "Vaibhav asks: Which tool can measure how hot or cold something is?",
+    "choices": [
+      "Clock",
+      "Compass",
+      "Thermometer",
+      "Ruler"
+    ],
+    "answerIndex": 2,
+    "hint": "It uses degrees.",
+    "explanation": "A thermometer measures temperature."
+  },
+  {
+    "id": "g2-science-043",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "habitats",
+    "question": "Vaibhav asks: What is a habitat?",
+    "choices": [
+      "A type of shoe",
+      "A place where an animal lives",
+      "A kind of snack",
+      "A school supply"
+    ],
+    "answerIndex": 1,
+    "hint": "Animals find food and shelter there.",
+    "explanation": "A habitat is a place where an animal lives."
+  },
+  {
+    "id": "g2-science-044",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "senses",
+    "question": "Vaibhav asks: Which sense helps Samaira hear music?",
+    "choices": [
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
+    ],
+    "answerIndex": 0,
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
+  },
+  {
     "id": "g2-science-045",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What do animals need to live?",
+    "skill": "earth",
+    "question": "Vaibhav asks: What gives Earth light during the day?",
     "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-046",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which tool can measure how hot or cold something is?",
+    "skill": "sound",
+    "question": "Vaibhav asks: What makes sound when it vibrates?",
     "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-047",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What is a habitat?",
+    "skill": "water-cycle",
+    "question": "Vaibhav asks: What can clouds bring to the ground?",
     "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "Shoes",
+      "Rain",
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-048",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What does a seed grow into?",
+    "skill": "plants",
+    "question": "At home, Nitisha wonders: What does a seed grow into?",
     "choices": [
       "Plant",
       "Rock",
@@ -5072,15 +5072,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which object is pulled by a magnet?",
+    "skill": "magnets",
+    "question": "At home, Nitisha wonders: Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
@@ -5089,15 +5089,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What is a baby frog called?",
+    "skill": "animal-life-cycles",
+    "question": "At home, Nitisha wonders: What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
@@ -5106,15 +5106,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which weather has water falling from clouds?",
+    "skill": "weather",
+    "question": "At home, Nitisha wonders: Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
@@ -5123,8 +5123,8 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What do lungs help you do?",
+    "skill": "body-systems",
+    "question": "At home, Nitisha wonders: What do lungs help you do?",
     "choices": [
       "Breathe",
       "Draw",
@@ -5140,15 +5140,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which material is clear and used in windows?",
+    "skill": "materials",
+    "question": "At home, Nitisha wonders: Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
@@ -5157,15 +5157,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What happens to ice when it gets warm?",
+    "skill": "matter",
+    "question": "At home, Nitisha wonders: What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
@@ -5174,15 +5174,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which animal group has scales and lays eggs?",
+    "skill": "animal-groups",
+    "question": "At home, Nitisha wonders: Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
@@ -5191,8 +5191,8 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which part of a plant takes in water?",
+    "skill": "plant-parts",
+    "question": "At home, Nitisha wonders: Which part of a plant takes in water?",
     "choices": [
       "Roots",
       "Petals",
@@ -5208,15 +5208,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What do animals need to live?",
+    "skill": "animal-needs",
+    "question": "At home, Nitisha wonders: What do animals need to live?",
     "choices": [
-      "Food and water",
       "Glue and paper",
       "Shoes and hats",
-      "Books and crayons"
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "Think about basic needs.",
     "explanation": "Animals need food, water, air, and shelter."
   },
@@ -5225,15 +5225,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which tool can measure how hot or cold something is?",
+    "skill": "tools",
+    "question": "At home, Nitisha wonders: Which tool can measure how hot or cold something is?",
     "choices": [
-      "Thermometer",
-      "Ruler",
       "Clock",
-      "Compass"
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It uses degrees.",
     "explanation": "A thermometer measures temperature."
   },
@@ -5242,15 +5242,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What is a habitat?",
+    "skill": "habitats",
+    "question": "At home, Nitisha wonders: What is a habitat?",
     "choices": [
+      "A type of shoe",
       "A place where an animal lives",
       "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "A school supply"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Animals find food and shelter there.",
     "explanation": "A habitat is a place where an animal lives."
   },
@@ -5259,416 +5259,348 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What does a seed grow into?",
+    "skill": "senses",
+    "question": "At home, Nitisha wonders: Which sense helps Samaira hear music?",
     "choices": [
-      "Plant",
-      "Rock",
-      "Cloud",
-      "Spoon"
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
     ],
     "answerIndex": 0,
-    "hint": "A seed can sprout.",
-    "explanation": "A seed can grow into a plant."
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
   },
   {
     "id": "g2-science-061",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which object is pulled by a magnet?",
+    "skill": "earth",
+    "question": "At home, Nitisha wonders: What gives Earth light during the day?",
     "choices": [
-      "Paper clip",
-      "Apple",
-      "Crayon",
-      "Leaf"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "It is made of metal.",
-    "explanation": "A paper clip can be pulled by a magnet."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-062",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a baby frog called?",
+    "skill": "sound",
+    "question": "At home, Nitisha wonders: What makes sound when it vibrates?",
     "choices": [
-      "Tadpole",
-      "Kitten",
-      "Calf",
-      "Chick"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "It swims before it grows legs.",
-    "explanation": "A baby frog is called a tadpole."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-063",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which weather has water falling from clouds?",
+    "skill": "water-cycle",
+    "question": "At home, Nitisha wonders: What can clouds bring to the ground?",
     "choices": [
+      "Shoes",
       "Rain",
-      "Sunny",
-      "Windy",
-      "Foggy"
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "You may use an umbrella.",
-    "explanation": "Rain is water falling from clouds."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-064",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do lungs help you do?",
+    "skill": "plants",
+    "question": "What does a seed grow into?",
     "choices": [
-      "Breathe",
-      "Draw",
-      "Jump",
-      "Taste"
+      "Plant",
+      "Rock",
+      "Cloud",
+      "Spoon"
     ],
     "answerIndex": 0,
-    "hint": "You use them when you inhale.",
-    "explanation": "Lungs help us breathe."
+    "hint": "A seed can sprout.",
+    "explanation": "A seed can grow into a plant."
   },
   {
     "id": "g2-science-065",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which material is clear and used in windows?",
+    "skill": "magnets",
+    "question": "Which object is pulled by a magnet?",
     "choices": [
-      "Glass",
-      "Wood",
-      "Cloth",
-      "Paper"
+      "Apple",
+      "Crayon",
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
-    "hint": "You can see through it.",
-    "explanation": "Glass is clear and used in windows."
+    "answerIndex": 3,
+    "hint": "It is made of metal.",
+    "explanation": "A paper clip can be pulled by a magnet."
   },
   {
     "id": "g2-science-066",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What happens to ice when it gets warm?",
+    "skill": "animal-life-cycles",
+    "question": "What is a baby frog called?",
     "choices": [
-      "It melts",
-      "It sings",
-      "It grows fur",
-      "It turns into sand"
+      "Calf",
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
-    "hint": "Warmth changes it to liquid water.",
-    "explanation": "Ice melts into water when it gets warm."
+    "answerIndex": 2,
+    "hint": "It swims before it grows legs.",
+    "explanation": "A baby frog is called a tadpole."
   },
   {
     "id": "g2-science-067",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which animal group has scales and lays eggs?",
+    "skill": "weather",
+    "question": "Which weather has water falling from clouds?",
     "choices": [
-      "Fish",
-      "Dogs",
-      "Birds",
-      "Horses"
+      "Foggy",
+      "Rain",
+      "Sunny",
+      "Windy"
     ],
-    "answerIndex": 0,
-    "hint": "Many of them swim.",
-    "explanation": "Fish have scales and lay eggs."
+    "answerIndex": 1,
+    "hint": "You may use an umbrella.",
+    "explanation": "Rain is water falling from clouds."
   },
   {
     "id": "g2-science-068",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which part of a plant takes in water?",
+    "skill": "body-systems",
+    "question": "What do lungs help you do?",
     "choices": [
-      "Roots",
-      "Petals",
-      "Fruit",
-      "Stem"
+      "Breathe",
+      "Draw",
+      "Jump",
+      "Taste"
     ],
     "answerIndex": 0,
-    "hint": "This part is usually in soil.",
-    "explanation": "Roots take in water from soil."
+    "hint": "You use them when you inhale.",
+    "explanation": "Lungs help us breathe."
   },
   {
     "id": "g2-science-069",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do animals need to live?",
+    "skill": "materials",
+    "question": "Which material is clear and used in windows?",
     "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
+      "Wood",
+      "Cloth",
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
+    "answerIndex": 3,
+    "hint": "You can see through it.",
+    "explanation": "Glass is clear and used in windows."
   },
   {
     "id": "g2-science-070",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which tool can measure how hot or cold something is?",
+    "skill": "matter",
+    "question": "What happens to ice when it gets warm?",
     "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
+      "It grows fur",
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
+    "answerIndex": 2,
+    "hint": "Warmth changes it to liquid water.",
+    "explanation": "Ice melts into water when it gets warm."
   },
   {
     "id": "g2-science-071",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a habitat?",
+    "skill": "animal-groups",
+    "question": "Which animal group has scales and lays eggs?",
     "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "Horses",
+      "Fish",
+      "Dogs",
+      "Birds"
     ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
+    "answerIndex": 1,
+    "hint": "Many of them swim.",
+    "explanation": "Fish have scales and lay eggs."
   },
   {
     "id": "g2-science-072",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What does a seed grow into?",
+    "skill": "plant-parts",
+    "question": "Which part of a plant takes in water?",
     "choices": [
-      "Plant",
-      "Rock",
-      "Cloud",
-      "Spoon"
+      "Roots",
+      "Petals",
+      "Fruit",
+      "Stem"
     ],
     "answerIndex": 0,
-    "hint": "A seed can sprout.",
-    "explanation": "A seed can grow into a plant."
+    "hint": "This part is usually in soil.",
+    "explanation": "Roots take in water from soil."
   },
   {
     "id": "g2-science-073",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which object is pulled by a magnet?",
+    "skill": "animal-needs",
+    "question": "What do animals need to live?",
     "choices": [
-      "Paper clip",
-      "Apple",
-      "Crayon",
-      "Leaf"
+      "Glue and paper",
+      "Shoes and hats",
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
-    "hint": "It is made of metal.",
-    "explanation": "A paper clip can be pulled by a magnet."
+    "answerIndex": 3,
+    "hint": "Think about basic needs.",
+    "explanation": "Animals need food, water, air, and shelter."
   },
   {
     "id": "g2-science-074",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What is a baby frog called?",
+    "skill": "tools",
+    "question": "Which tool can measure how hot or cold something is?",
     "choices": [
-      "Tadpole",
-      "Kitten",
-      "Calf",
-      "Chick"
+      "Clock",
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
-    "hint": "It swims before it grows legs.",
-    "explanation": "A baby frog is called a tadpole."
+    "answerIndex": 2,
+    "hint": "It uses degrees.",
+    "explanation": "A thermometer measures temperature."
   },
   {
     "id": "g2-science-075",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which weather has water falling from clouds?",
+    "skill": "habitats",
+    "question": "What is a habitat?",
     "choices": [
-      "Rain",
-      "Sunny",
-      "Windy",
-      "Foggy"
+      "A type of shoe",
+      "A place where an animal lives",
+      "A kind of snack",
+      "A school supply"
     ],
-    "answerIndex": 0,
-    "hint": "You may use an umbrella.",
-    "explanation": "Rain is water falling from clouds."
+    "answerIndex": 1,
+    "hint": "Animals find food and shelter there.",
+    "explanation": "A habitat is a place where an animal lives."
   },
   {
     "id": "g2-science-076",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What do lungs help you do?",
+    "skill": "senses",
+    "question": "Which sense helps Samaira hear music?",
     "choices": [
-      "Breathe",
-      "Draw",
-      "Jump",
-      "Taste"
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
     ],
     "answerIndex": 0,
-    "hint": "You use them when you inhale.",
-    "explanation": "Lungs help us breathe."
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
   },
   {
     "id": "g2-science-077",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which material is clear and used in windows?",
+    "skill": "earth",
+    "question": "What gives Earth light during the day?",
     "choices": [
-      "Glass",
-      "Wood",
-      "Cloth",
-      "Paper"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "You can see through it.",
-    "explanation": "Glass is clear and used in windows."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-078",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What happens to ice when it gets warm?",
+    "skill": "sound",
+    "question": "What makes sound when it vibrates?",
     "choices": [
-      "It melts",
-      "It sings",
-      "It grows fur",
-      "It turns into sand"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "Warmth changes it to liquid water.",
-    "explanation": "Ice melts into water when it gets warm."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-079",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which animal group has scales and lays eggs?",
+    "skill": "water-cycle",
+    "question": "What can clouds bring to the ground?",
     "choices": [
-      "Fish",
-      "Dogs",
-      "Birds",
-      "Horses"
+      "Shoes",
+      "Rain",
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "Many of them swim.",
-    "explanation": "Fish have scales and lay eggs."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-080",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which part of a plant takes in water?",
-    "choices": [
-      "Roots",
-      "Petals",
-      "Fruit",
-      "Stem"
-    ],
-    "answerIndex": 0,
-    "hint": "This part is usually in soil.",
-    "explanation": "Roots take in water from soil."
-  },
-  {
-    "id": "g2-science-081",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What do animals need to live?",
-    "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
-    ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
-  },
-  {
-    "id": "g2-science-082",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which tool can measure how hot or cold something is?",
-    "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
-    ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
-  },
-  {
-    "id": "g2-science-083",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What is a habitat?",
-    "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
-    ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
-  },
-  {
-    "id": "g2-science-084",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What does a seed grow into?",
+    "skill": "plants",
+    "question": "Sahir is learning science. What does a seed grow into?",
     "choices": [
       "Plant",
       "Rock",
@@ -5680,63 +5612,63 @@ export const starterQuestions: Question[] = [
     "explanation": "A seed can grow into a plant."
   },
   {
-    "id": "g2-science-085",
+    "id": "g2-science-081",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which object is pulled by a magnet?",
+    "skill": "magnets",
+    "question": "Sahir is learning science. Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
   {
-    "id": "g2-science-086",
+    "id": "g2-science-082",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What is a baby frog called?",
+    "skill": "animal-life-cycles",
+    "question": "Sahir is learning science. What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
   {
-    "id": "g2-science-087",
+    "id": "g2-science-083",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which weather has water falling from clouds?",
+    "skill": "weather",
+    "question": "Sahir is learning science. Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
   {
-    "id": "g2-science-088",
+    "id": "g2-science-084",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What do lungs help you do?",
+    "skill": "body-systems",
+    "question": "Sahir is learning science. What do lungs help you do?",
     "choices": [
       "Breathe",
       "Draw",
@@ -5748,63 +5680,63 @@ export const starterQuestions: Question[] = [
     "explanation": "Lungs help us breathe."
   },
   {
-    "id": "g2-science-089",
+    "id": "g2-science-085",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which material is clear and used in windows?",
+    "skill": "materials",
+    "question": "Sahir is learning science. Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
   {
-    "id": "g2-science-090",
+    "id": "g2-science-086",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What happens to ice when it gets warm?",
+    "skill": "matter",
+    "question": "Sahir is learning science. What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
   {
-    "id": "g2-science-091",
+    "id": "g2-science-087",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which animal group has scales and lays eggs?",
+    "skill": "animal-groups",
+    "question": "Sahir is learning science. Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
   {
-    "id": "g2-science-092",
+    "id": "g2-science-088",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which part of a plant takes in water?",
+    "skill": "plant-parts",
+    "question": "Sahir is learning science. Which part of a plant takes in water?",
     "choices": [
       "Roots",
       "Petals",
@@ -5816,63 +5748,131 @@ export const starterQuestions: Question[] = [
     "explanation": "Roots take in water from soil."
   },
   {
+    "id": "g2-science-089",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "animal-needs",
+    "question": "Sahir is learning science. What do animals need to live?",
+    "choices": [
+      "Glue and paper",
+      "Shoes and hats",
+      "Books and crayons",
+      "Food and water"
+    ],
+    "answerIndex": 3,
+    "hint": "Think about basic needs.",
+    "explanation": "Animals need food, water, air, and shelter."
+  },
+  {
+    "id": "g2-science-090",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "tools",
+    "question": "Sahir is learning science. Which tool can measure how hot or cold something is?",
+    "choices": [
+      "Clock",
+      "Compass",
+      "Thermometer",
+      "Ruler"
+    ],
+    "answerIndex": 2,
+    "hint": "It uses degrees.",
+    "explanation": "A thermometer measures temperature."
+  },
+  {
+    "id": "g2-science-091",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "habitats",
+    "question": "Sahir is learning science. What is a habitat?",
+    "choices": [
+      "A type of shoe",
+      "A place where an animal lives",
+      "A kind of snack",
+      "A school supply"
+    ],
+    "answerIndex": 1,
+    "hint": "Animals find food and shelter there.",
+    "explanation": "A habitat is a place where an animal lives."
+  },
+  {
+    "id": "g2-science-092",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "senses",
+    "question": "Sahir is learning science. Which sense helps Samaira hear music?",
+    "choices": [
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
+    ],
+    "answerIndex": 0,
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
+  },
+  {
     "id": "g2-science-093",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What do animals need to live?",
+    "skill": "earth",
+    "question": "Sahir is learning science. What gives Earth light during the day?",
     "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-science-094",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: Which tool can measure how hot or cold something is?",
+    "skill": "sound",
+    "question": "Sahir is learning science. What makes sound when it vibrates?",
     "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
     ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
   },
   {
     "id": "g2-science-095",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Try this: What is a habitat?",
+    "skill": "water-cycle",
+    "question": "Sahir is learning science. What can clouds bring to the ground?",
     "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "Shoes",
+      "Rain",
+      "Chairs",
+      "Pencils"
     ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
   },
   {
     "id": "g2-science-096",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What does a seed grow into?",
+    "skill": "plants",
+    "question": "Vaibhav asks: What does a seed grow into?",
     "choices": [
       "Plant",
       "Rock",
@@ -5888,15 +5888,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which object is pulled by a magnet?",
+    "skill": "magnets",
+    "question": "Vaibhav asks: Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
@@ -5905,15 +5905,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What is a baby frog called?",
+    "skill": "animal-life-cycles",
+    "question": "Vaibhav asks: What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
@@ -5922,15 +5922,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which weather has water falling from clouds?",
+    "skill": "weather",
+    "question": "Vaibhav asks: Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
@@ -5939,8 +5939,8 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What do lungs help you do?",
+    "skill": "body-systems",
+    "question": "Vaibhav asks: What do lungs help you do?",
     "choices": [
       "Breathe",
       "Draw",
@@ -5956,15 +5956,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which material is clear and used in windows?",
+    "skill": "materials",
+    "question": "Vaibhav asks: Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
@@ -5973,15 +5973,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What happens to ice when it gets warm?",
+    "skill": "matter",
+    "question": "Vaibhav asks: What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
@@ -5990,15 +5990,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which animal group has scales and lays eggs?",
+    "skill": "animal-groups",
+    "question": "Vaibhav asks: Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
@@ -6007,8 +6007,8 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which part of a plant takes in water?",
+    "skill": "plant-parts",
+    "question": "Vaibhav asks: Which part of a plant takes in water?",
     "choices": [
       "Roots",
       "Petals",
@@ -6024,15 +6024,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What do animals need to live?",
+    "skill": "animal-needs",
+    "question": "Vaibhav asks: What do animals need to live?",
     "choices": [
-      "Food and water",
       "Glue and paper",
       "Shoes and hats",
-      "Books and crayons"
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "Think about basic needs.",
     "explanation": "Animals need food, water, air, and shelter."
   },
@@ -6041,15 +6041,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Which tool can measure how hot or cold something is?",
+    "skill": "tools",
+    "question": "Vaibhav asks: Which tool can measure how hot or cold something is?",
     "choices": [
-      "Thermometer",
-      "Ruler",
       "Clock",
-      "Compass"
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It uses degrees.",
     "explanation": "A thermometer measures temperature."
   },
@@ -6058,15 +6058,15 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "What is a habitat?",
+    "skill": "habitats",
+    "question": "Vaibhav asks: What is a habitat?",
     "choices": [
+      "A type of shoe",
       "A place where an animal lives",
       "A kind of snack",
-      "A school supply",
-      "A type of shoe"
+      "A school supply"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Animals find food and shelter there.",
     "explanation": "A habitat is a place where an animal lives."
   },
@@ -6075,8 +6075,76 @@ export const starterQuestions: Question[] = [
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What does a seed grow into?",
+    "skill": "senses",
+    "question": "Vaibhav asks: Which sense helps Samaira hear music?",
+    "choices": [
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
+    ],
+    "answerIndex": 0,
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
+  },
+  {
+    "id": "g2-science-109",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "earth",
+    "question": "Vaibhav asks: What gives Earth light during the day?",
+    "choices": [
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
+    ],
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
+  },
+  {
+    "id": "g2-science-110",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "sound",
+    "question": "Vaibhav asks: What makes sound when it vibrates?",
+    "choices": [
+      "A still rock",
+      "A closed book",
+      "A guitar string",
+      "A quiet sock"
+    ],
+    "answerIndex": 2,
+    "hint": "Vibrate means move back and forth quickly.",
+    "explanation": "A guitar string can vibrate and make sound."
+  },
+  {
+    "id": "g2-science-111",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "water-cycle",
+    "question": "Vaibhav asks: What can clouds bring to the ground?",
+    "choices": [
+      "Shoes",
+      "Rain",
+      "Chairs",
+      "Pencils"
+    ],
+    "answerIndex": 1,
+    "hint": "It is water from the sky.",
+    "explanation": "Clouds can bring rain to the ground."
+  },
+  {
+    "id": "g2-science-112",
+    "grade": 2,
+    "subject": "Science",
+    "source": "starter",
+    "skill": "plants",
+    "question": "At home, Nitisha wonders: What does a seed grow into?",
     "choices": [
       "Plant",
       "Rock",
@@ -6088,63 +6156,63 @@ export const starterQuestions: Question[] = [
     "explanation": "A seed can grow into a plant."
   },
   {
-    "id": "g2-science-109",
+    "id": "g2-science-113",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which object is pulled by a magnet?",
+    "skill": "magnets",
+    "question": "At home, Nitisha wonders: Which object is pulled by a magnet?",
     "choices": [
-      "Paper clip",
       "Apple",
       "Crayon",
-      "Leaf"
+      "Leaf",
+      "Paper clip"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "It is made of metal.",
     "explanation": "A paper clip can be pulled by a magnet."
   },
   {
-    "id": "g2-science-110",
+    "id": "g2-science-114",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a baby frog called?",
+    "skill": "animal-life-cycles",
+    "question": "At home, Nitisha wonders: What is a baby frog called?",
     "choices": [
-      "Tadpole",
-      "Kitten",
       "Calf",
-      "Chick"
+      "Chick",
+      "Tadpole",
+      "Kitten"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "It swims before it grows legs.",
     "explanation": "A baby frog is called a tadpole."
   },
   {
-    "id": "g2-science-111",
+    "id": "g2-science-115",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which weather has water falling from clouds?",
+    "skill": "weather",
+    "question": "At home, Nitisha wonders: Which weather has water falling from clouds?",
     "choices": [
+      "Foggy",
       "Rain",
       "Sunny",
-      "Windy",
-      "Foggy"
+      "Windy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "You may use an umbrella.",
     "explanation": "Rain is water falling from clouds."
   },
   {
-    "id": "g2-science-112",
+    "id": "g2-science-116",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do lungs help you do?",
+    "skill": "body-systems",
+    "question": "At home, Nitisha wonders: What do lungs help you do?",
     "choices": [
       "Breathe",
       "Draw",
@@ -6156,63 +6224,63 @@ export const starterQuestions: Question[] = [
     "explanation": "Lungs help us breathe."
   },
   {
-    "id": "g2-science-113",
+    "id": "g2-science-117",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which material is clear and used in windows?",
+    "skill": "materials",
+    "question": "At home, Nitisha wonders: Which material is clear and used in windows?",
     "choices": [
-      "Glass",
       "Wood",
       "Cloth",
-      "Paper"
+      "Paper",
+      "Glass"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "hint": "You can see through it.",
     "explanation": "Glass is clear and used in windows."
   },
   {
-    "id": "g2-science-114",
+    "id": "g2-science-118",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What happens to ice when it gets warm?",
+    "skill": "matter",
+    "question": "At home, Nitisha wonders: What happens to ice when it gets warm?",
     "choices": [
-      "It melts",
-      "It sings",
       "It grows fur",
-      "It turns into sand"
+      "It turns into sand",
+      "It melts",
+      "It sings"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "hint": "Warmth changes it to liquid water.",
     "explanation": "Ice melts into water when it gets warm."
   },
   {
-    "id": "g2-science-115",
+    "id": "g2-science-119",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which animal group has scales and lays eggs?",
+    "skill": "animal-groups",
+    "question": "At home, Nitisha wonders: Which animal group has scales and lays eggs?",
     "choices": [
+      "Horses",
       "Fish",
       "Dogs",
-      "Birds",
-      "Horses"
+      "Birds"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "hint": "Many of them swim.",
     "explanation": "Fish have scales and lay eggs."
   },
   {
-    "id": "g2-science-116",
+    "id": "g2-science-120",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which part of a plant takes in water?",
+    "skill": "plant-parts",
+    "question": "At home, Nitisha wonders: Which part of a plant takes in water?",
     "choices": [
       "Roots",
       "Petals",
@@ -6224,157 +6292,89 @@ export const starterQuestions: Question[] = [
     "explanation": "Roots take in water from soil."
   },
   {
-    "id": "g2-science-117",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What do animals need to live?",
-    "choices": [
-      "Food and water",
-      "Glue and paper",
-      "Shoes and hats",
-      "Books and crayons"
-    ],
-    "answerIndex": 0,
-    "hint": "Think about basic needs.",
-    "explanation": "Animals need food, water, air, and shelter."
-  },
-  {
-    "id": "g2-science-118",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: Which tool can measure how hot or cold something is?",
-    "choices": [
-      "Thermometer",
-      "Ruler",
-      "Clock",
-      "Compass"
-    ],
-    "answerIndex": 0,
-    "hint": "It uses degrees.",
-    "explanation": "A thermometer measures temperature."
-  },
-  {
-    "id": "g2-science-119",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Review: What is a habitat?",
-    "choices": [
-      "A place where an animal lives",
-      "A kind of snack",
-      "A school supply",
-      "A type of shoe"
-    ],
-    "answerIndex": 0,
-    "hint": "Animals find food and shelter there.",
-    "explanation": "A habitat is a place where an animal lives."
-  },
-  {
-    "id": "g2-science-120",
-    "grade": 2,
-    "subject": "Science",
-    "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What does a seed grow into?",
-    "choices": [
-      "Plant",
-      "Rock",
-      "Cloud",
-      "Spoon"
-    ],
-    "answerIndex": 0,
-    "hint": "A seed can sprout.",
-    "explanation": "A seed can grow into a plant."
-  },
-  {
     "id": "g2-science-121",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which object is pulled by a magnet?",
+    "skill": "animal-needs",
+    "question": "At home, Nitisha wonders: What do animals need to live?",
     "choices": [
-      "Paper clip",
-      "Apple",
-      "Crayon",
-      "Leaf"
+      "Glue and paper",
+      "Shoes and hats",
+      "Books and crayons",
+      "Food and water"
     ],
-    "answerIndex": 0,
-    "hint": "It is made of metal.",
-    "explanation": "A paper clip can be pulled by a magnet."
+    "answerIndex": 3,
+    "hint": "Think about basic needs.",
+    "explanation": "Animals need food, water, air, and shelter."
   },
   {
     "id": "g2-science-122",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What is a baby frog called?",
+    "skill": "tools",
+    "question": "At home, Nitisha wonders: Which tool can measure how hot or cold something is?",
     "choices": [
-      "Tadpole",
-      "Kitten",
-      "Calf",
-      "Chick"
+      "Clock",
+      "Compass",
+      "Thermometer",
+      "Ruler"
     ],
-    "answerIndex": 0,
-    "hint": "It swims before it grows legs.",
-    "explanation": "A baby frog is called a tadpole."
+    "answerIndex": 2,
+    "hint": "It uses degrees.",
+    "explanation": "A thermometer measures temperature."
   },
   {
     "id": "g2-science-123",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which weather has water falling from clouds?",
+    "skill": "habitats",
+    "question": "At home, Nitisha wonders: What is a habitat?",
     "choices": [
-      "Rain",
-      "Sunny",
-      "Windy",
-      "Foggy"
+      "A type of shoe",
+      "A place where an animal lives",
+      "A kind of snack",
+      "A school supply"
     ],
-    "answerIndex": 0,
-    "hint": "You may use an umbrella.",
-    "explanation": "Rain is water falling from clouds."
+    "answerIndex": 1,
+    "hint": "Animals find food and shelter there.",
+    "explanation": "A habitat is a place where an animal lives."
   },
   {
     "id": "g2-science-124",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: What do lungs help you do?",
+    "skill": "senses",
+    "question": "At home, Nitisha wonders: Which sense helps Samaira hear music?",
     "choices": [
-      "Breathe",
-      "Draw",
-      "Jump",
-      "Taste"
+      "Hearing",
+      "Taste",
+      "Smell",
+      "Touch"
     ],
     "answerIndex": 0,
-    "hint": "You use them when you inhale.",
-    "explanation": "Lungs help us breathe."
+    "hint": "Use your ears.",
+    "explanation": "Hearing is the sense that helps us hear music."
   },
   {
     "id": "g2-science-125",
     "grade": 2,
     "subject": "Science",
     "source": "starter",
-    "skill": "grade-2-science",
-    "question": "Think: Which material is clear and used in windows?",
+    "skill": "earth",
+    "question": "At home, Nitisha wonders: What gives Earth light during the day?",
     "choices": [
-      "Glass",
-      "Wood",
-      "Cloth",
-      "Paper"
+      "A pencil",
+      "A fish",
+      "A backpack",
+      "The Sun"
     ],
-    "answerIndex": 0,
-    "hint": "You can see through it.",
-    "explanation": "Glass is clear and used in windows."
+    "answerIndex": 3,
+    "hint": "It is bright in the sky.",
+    "explanation": "The Sun gives Earth light during the day."
   },
   {
     "id": "g2-spelling-001",
@@ -6773,7 +6773,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that tells why?",
+    "question": "Sahir is writing a word that means a word that tells why. Which spelling is correct?",
     "choices": [
       "because",
       "bcause",
@@ -6790,7 +6790,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means earlier than?",
+    "question": "Sahir is writing a word that means a word that means earlier than. Which spelling is correct?",
     "choices": [
       "bfore",
       "beforee",
@@ -6807,7 +6807,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means on all sides?",
+    "question": "Sahir is writing a word that means a word that means on all sides. Which spelling is correct?",
     "choices": [
       "round",
       "aroundd",
@@ -6824,7 +6824,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for someone you like and trust?",
+    "question": "Sahir is writing a word that means someone you like and trust. Which spelling is correct?",
     "choices": [
       "friendd",
       "friend",
@@ -6841,7 +6841,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means every time?",
+    "question": "Sahir is writing a word that means a word that means every time. Which spelling is correct?",
     "choices": [
       "always",
       "alwaye",
@@ -6858,7 +6858,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means nice to look at?",
+    "question": "Sahir is writing a word that means a word that means nice to look at. Which spelling is correct?",
     "choices": [
       "prette",
       "prtty",
@@ -6875,7 +6875,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where students learn?",
+    "question": "Sahir is writing a word that means a place where students learn. Which spelling is correct?",
     "choices": [
       "schol",
       "schooll",
@@ -6892,7 +6892,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for people who care for each other at home?",
+    "question": "Sahir is writing a word that means people who care for each other at home. Which spelling is correct?",
     "choices": [
       "familyy",
       "family",
@@ -6909,7 +6909,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means with each other?",
+    "question": "Sahir is writing a word that means a word that means with each other. Which spelling is correct?",
     "choices": [
       "together",
       "togethee",
@@ -6926,7 +6926,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a polite word used when asking?",
+    "question": "Sahir is writing a word that means a polite word used when asking. Which spelling is correct?",
     "choices": [
       "plase",
       "pleasee",
@@ -6943,7 +6943,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means little?",
+    "question": "Sahir is writing a word that means a word that means little. Which spelling is correct?",
     "choices": [
       "smll",
       "smalll",
@@ -6960,7 +6960,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means discovered?",
+    "question": "Sahir is writing a word that means a word that means discovered. Which spelling is correct?",
     "choices": [
       "foundd",
       "found",
@@ -6977,7 +6977,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for feeling glad?",
+    "question": "Sahir is writing a word that means feeling glad. Which spelling is correct?",
     "choices": [
       "happy",
       "happe",
@@ -6994,7 +6994,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for furniture used for eating or working?",
+    "question": "Sahir is writing a word that means furniture used for eating or working. Which spelling is correct?",
     "choices": [
       "tble",
       "tablee",
@@ -7011,7 +7011,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for not big?",
+    "question": "Sahir is writing a word that means not big. Which spelling is correct?",
     "choices": [
       "littlee",
       "rabbit",
@@ -7028,7 +7028,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for the color of a lemon?",
+    "question": "Sahir is writing a word that means the color of a lemon. Which spelling is correct?",
     "choices": [
       "yelloww",
       "yellow",
@@ -7045,7 +7045,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for something used to fasten a shirt?",
+    "question": "Sahir is writing a word that means something used to fasten a shirt. Which spelling is correct?",
     "choices": [
       "button",
       "buttoe",
@@ -7062,7 +7062,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a warm season?",
+    "question": "Sahir is writing a word that means a warm season. Which spelling is correct?",
     "choices": [
       "summee",
       "smmer",
@@ -7079,7 +7079,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for an animal with long ears?",
+    "question": "Sahir is writing a word that means an animal with long ears. Which spelling is correct?",
     "choices": [
       "rbbit",
       "rabbitt",
@@ -7096,7 +7096,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where flowers or vegetables grow?",
+    "question": "Sahir is writing a word that means a place where flowers or vegetables grow. Which spelling is correct?",
     "choices": [
       "gardenn",
       "garden",
@@ -7113,7 +7113,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a symbol that shows how many?",
+    "question": "Sahir is writing a word that means a symbol that shows how many. Which spelling is correct?",
     "choices": [
       "number",
       "numbee",
@@ -7130,7 +7130,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a tool used for writing?",
+    "question": "Sahir is writing a word that means a tool used for writing. Which spelling is correct?",
     "choices": [
       "pencie",
       "pncil",
@@ -7147,7 +7147,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for glass you can look through in a wall?",
+    "question": "Sahir is writing a word that means glass you can look through in a wall. Which spelling is correct?",
     "choices": [
       "wndow",
       "windoww",
@@ -7164,7 +7164,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a person who helps students learn?",
+    "question": "Sahir is writing a word that means a person who helps students learn. Which spelling is correct?",
     "choices": [
       "teacherr",
       "teacher",
@@ -7181,7 +7181,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that tells why?",
+    "question": "Vaibhav sees this clue: a word that tells why. Which word is spelled correctly?",
     "choices": [
       "because",
       "bcause",
@@ -7198,7 +7198,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means earlier than?",
+    "question": "Vaibhav sees this clue: a word that means earlier than. Which word is spelled correctly?",
     "choices": [
       "bfore",
       "beforee",
@@ -7215,7 +7215,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means on all sides?",
+    "question": "Vaibhav sees this clue: a word that means on all sides. Which word is spelled correctly?",
     "choices": [
       "round",
       "aroundd",
@@ -7232,7 +7232,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for someone you like and trust?",
+    "question": "Vaibhav sees this clue: someone you like and trust. Which word is spelled correctly?",
     "choices": [
       "friendd",
       "friend",
@@ -7249,7 +7249,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means every time?",
+    "question": "Vaibhav sees this clue: a word that means every time. Which word is spelled correctly?",
     "choices": [
       "always",
       "alwaye",
@@ -7266,7 +7266,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means nice to look at?",
+    "question": "Vaibhav sees this clue: a word that means nice to look at. Which word is spelled correctly?",
     "choices": [
       "prette",
       "prtty",
@@ -7283,7 +7283,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where students learn?",
+    "question": "Vaibhav sees this clue: a place where students learn. Which word is spelled correctly?",
     "choices": [
       "schol",
       "schooll",
@@ -7300,7 +7300,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for people who care for each other at home?",
+    "question": "Vaibhav sees this clue: people who care for each other at home. Which word is spelled correctly?",
     "choices": [
       "familyy",
       "family",
@@ -7317,7 +7317,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means with each other?",
+    "question": "Vaibhav sees this clue: a word that means with each other. Which word is spelled correctly?",
     "choices": [
       "together",
       "togethee",
@@ -7334,7 +7334,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a polite word used when asking?",
+    "question": "Vaibhav sees this clue: a polite word used when asking. Which word is spelled correctly?",
     "choices": [
       "plase",
       "pleasee",
@@ -7351,7 +7351,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means little?",
+    "question": "Vaibhav sees this clue: a word that means little. Which word is spelled correctly?",
     "choices": [
       "smll",
       "smalll",
@@ -7368,7 +7368,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means discovered?",
+    "question": "Vaibhav sees this clue: a word that means discovered. Which word is spelled correctly?",
     "choices": [
       "foundd",
       "found",
@@ -7385,7 +7385,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for feeling glad?",
+    "question": "Vaibhav sees this clue: feeling glad. Which word is spelled correctly?",
     "choices": [
       "happy",
       "happe",
@@ -7402,7 +7402,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for furniture used for eating or working?",
+    "question": "Vaibhav sees this clue: furniture used for eating or working. Which word is spelled correctly?",
     "choices": [
       "tble",
       "tablee",
@@ -7419,7 +7419,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for not big?",
+    "question": "Vaibhav sees this clue: not big. Which word is spelled correctly?",
     "choices": [
       "littlee",
       "rabbit",
@@ -7436,7 +7436,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for the color of a lemon?",
+    "question": "Vaibhav sees this clue: the color of a lemon. Which word is spelled correctly?",
     "choices": [
       "yelloww",
       "yellow",
@@ -7453,7 +7453,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for something used to fasten a shirt?",
+    "question": "Vaibhav sees this clue: something used to fasten a shirt. Which word is spelled correctly?",
     "choices": [
       "button",
       "buttoe",
@@ -7470,7 +7470,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a warm season?",
+    "question": "Vaibhav sees this clue: a warm season. Which word is spelled correctly?",
     "choices": [
       "summee",
       "smmer",
@@ -7487,7 +7487,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for an animal with long ears?",
+    "question": "Vaibhav sees this clue: an animal with long ears. Which word is spelled correctly?",
     "choices": [
       "rbbit",
       "rabbitt",
@@ -7504,7 +7504,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where flowers or vegetables grow?",
+    "question": "Vaibhav sees this clue: a place where flowers or vegetables grow. Which word is spelled correctly?",
     "choices": [
       "gardenn",
       "garden",
@@ -7521,7 +7521,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a symbol that shows how many?",
+    "question": "Vaibhav sees this clue: a symbol that shows how many. Which word is spelled correctly?",
     "choices": [
       "number",
       "numbee",
@@ -7538,7 +7538,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a tool used for writing?",
+    "question": "Vaibhav sees this clue: a tool used for writing. Which word is spelled correctly?",
     "choices": [
       "pencie",
       "pncil",
@@ -7555,7 +7555,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for glass you can look through in a wall?",
+    "question": "Vaibhav sees this clue: glass you can look through in a wall. Which word is spelled correctly?",
     "choices": [
       "wndow",
       "windoww",
@@ -7572,7 +7572,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a person who helps students learn?",
+    "question": "Vaibhav sees this clue: a person who helps students learn. Which word is spelled correctly?",
     "choices": [
       "teacherr",
       "teacher",
@@ -7997,7 +7997,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that tells why?",
+    "question": "Samaira is writing a word that means a word that tells why. Which spelling is correct?",
     "choices": [
       "because",
       "bcause",
@@ -8014,7 +8014,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means earlier than?",
+    "question": "Samaira is writing a word that means a word that means earlier than. Which spelling is correct?",
     "choices": [
       "bfore",
       "beforee",
@@ -8031,7 +8031,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means on all sides?",
+    "question": "Samaira is writing a word that means a word that means on all sides. Which spelling is correct?",
     "choices": [
       "round",
       "aroundd",
@@ -8048,7 +8048,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for someone you like and trust?",
+    "question": "Samaira is writing a word that means someone you like and trust. Which spelling is correct?",
     "choices": [
       "friendd",
       "friend",
@@ -8065,7 +8065,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means every time?",
+    "question": "Samaira is writing a word that means a word that means every time. Which spelling is correct?",
     "choices": [
       "always",
       "alwaye",
@@ -8082,7 +8082,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means nice to look at?",
+    "question": "Samaira is writing a word that means a word that means nice to look at. Which spelling is correct?",
     "choices": [
       "prette",
       "prtty",
@@ -8099,7 +8099,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where students learn?",
+    "question": "Samaira is writing a word that means a place where students learn. Which spelling is correct?",
     "choices": [
       "schol",
       "schooll",
@@ -8116,7 +8116,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for people who care for each other at home?",
+    "question": "Samaira is writing a word that means people who care for each other at home. Which spelling is correct?",
     "choices": [
       "familyy",
       "family",
@@ -8133,7 +8133,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means with each other?",
+    "question": "Samaira is writing a word that means a word that means with each other. Which spelling is correct?",
     "choices": [
       "together",
       "togethee",
@@ -8150,7 +8150,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a polite word used when asking?",
+    "question": "Samaira is writing a word that means a polite word used when asking. Which spelling is correct?",
     "choices": [
       "plase",
       "pleasee",
@@ -8167,7 +8167,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means little?",
+    "question": "Samaira is writing a word that means a word that means little. Which spelling is correct?",
     "choices": [
       "smll",
       "smalll",
@@ -8184,7 +8184,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means discovered?",
+    "question": "Samaira is writing a word that means a word that means discovered. Which spelling is correct?",
     "choices": [
       "foundd",
       "found",
@@ -8201,7 +8201,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for feeling glad?",
+    "question": "Samaira is writing a word that means feeling glad. Which spelling is correct?",
     "choices": [
       "happy",
       "happe",
@@ -8218,7 +8218,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for furniture used for eating or working?",
+    "question": "Samaira is writing a word that means furniture used for eating or working. Which spelling is correct?",
     "choices": [
       "tble",
       "tablee",
@@ -8235,7 +8235,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for not big?",
+    "question": "Samaira is writing a word that means not big. Which spelling is correct?",
     "choices": [
       "littlee",
       "rabbit",
@@ -8252,7 +8252,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for the color of a lemon?",
+    "question": "Samaira is writing a word that means the color of a lemon. Which spelling is correct?",
     "choices": [
       "yelloww",
       "yellow",
@@ -8269,7 +8269,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for something used to fasten a shirt?",
+    "question": "Samaira is writing a word that means something used to fasten a shirt. Which spelling is correct?",
     "choices": [
       "button",
       "buttoe",
@@ -8286,7 +8286,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a warm season?",
+    "question": "Samaira is writing a word that means a warm season. Which spelling is correct?",
     "choices": [
       "summee",
       "smmer",
@@ -8303,7 +8303,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for an animal with long ears?",
+    "question": "Samaira is writing a word that means an animal with long ears. Which spelling is correct?",
     "choices": [
       "rbbit",
       "rabbitt",
@@ -8320,7 +8320,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a place where flowers or vegetables grow?",
+    "question": "Samaira is writing a word that means a place where flowers or vegetables grow. Which spelling is correct?",
     "choices": [
       "gardenn",
       "garden",
@@ -8337,7 +8337,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a symbol that shows how many?",
+    "question": "Samaira is writing a word that means a symbol that shows how many. Which spelling is correct?",
     "choices": [
       "number",
       "numbee",
@@ -8354,7 +8354,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a tool used for writing?",
+    "question": "Samaira is writing a word that means a tool used for writing. Which spelling is correct?",
     "choices": [
       "pencie",
       "pncil",
@@ -8371,7 +8371,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for glass you can look through in a wall?",
+    "question": "Samaira is writing a word that means glass you can look through in a wall. Which spelling is correct?",
     "choices": [
       "wndow",
       "windoww",
@@ -8388,7 +8388,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a person who helps students learn?",
+    "question": "Samaira is writing a word that means a person who helps students learn. Which spelling is correct?",
     "choices": [
       "teacherr",
       "teacher",
@@ -8405,7 +8405,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that tells why?",
+    "question": "Sahir sees this clue: a word that tells why. Which word is spelled correctly?",
     "choices": [
       "because",
       "bcause",
@@ -8422,7 +8422,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means earlier than?",
+    "question": "Sahir sees this clue: a word that means earlier than. Which word is spelled correctly?",
     "choices": [
       "bfore",
       "beforee",
@@ -8439,7 +8439,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means on all sides?",
+    "question": "Sahir sees this clue: a word that means on all sides. Which word is spelled correctly?",
     "choices": [
       "round",
       "aroundd",
@@ -8456,7 +8456,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for someone you like and trust?",
+    "question": "Sahir sees this clue: someone you like and trust. Which word is spelled correctly?",
     "choices": [
       "friendd",
       "friend",
@@ -8473,7 +8473,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means every time?",
+    "question": "Sahir sees this clue: a word that means every time. Which word is spelled correctly?",
     "choices": [
       "always",
       "alwaye",
@@ -8490,7 +8490,7 @@ export const starterQuestions: Question[] = [
     "subject": "Spelling",
     "source": "starter",
     "skill": "grade-2-spelling",
-    "question": "Which spelling is correct for a word that means nice to look at?",
+    "question": "Sahir sees this clue: a word that means nice to look at. Which word is spelled correctly?",
     "choices": [
       "prette",
       "prtty",

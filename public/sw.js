@@ -1,4 +1,4 @@
-const CACHE_NAME = "samaira-quiz-v5";
+const CACHE_NAME = "samaira-quiz-v6";
 const APP_SHELL = ["./", "./manifest.webmanifest", "./quiz-icon.svg"];
 
 self.addEventListener("install", (event) => {
