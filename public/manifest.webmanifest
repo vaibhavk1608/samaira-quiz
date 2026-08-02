@@ -1,0 +1,17 @@
+{
+  "name": "Samaira's Quiz",
+  "short_name": "Samaira Quiz",
+  "description": "A colorful 15-question quiz app for Samaira.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#bdefff",
+  "theme_color": "#0b8ff0",
+  "icons": [
+    {
+      "src": "quiz-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
