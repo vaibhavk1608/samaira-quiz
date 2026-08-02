@@ -12,29 +12,33 @@ import {
   Home,
   Lock,
   LogOut,
+  Plus,
   RefreshCcw,
+  Save,
   ShieldCheck,
   Sparkles,
   Star,
   Trophy,
   Upload,
+  UserRound,
   XCircle,
 } from "lucide-react";
 import "./App.css";
 import { starterQuestions } from "./data/questionBank";
-import type { Question, QuestionPack, QuizRun, Subject } from "./types";
+import type { LearnerProfile, ProfileFavorites, ProfileProgress, ProfileStore, Question, QuestionPack, QuizRun, Subject } from "./types";
 
 const STORAGE_KEY = "samaira-quiz-questions";
 const RECENT_KEY = "samaira-quiz-recent";
 const SCORE_KEY = "samaira-quiz-score";
 const HISTORY_KEY = "samaira-quiz-history";
+const PROFILE_KEY = "samaira-quiz-profiles";
 const PARENT_PIN = "2468";
 const SESSION_SIZE = 15;
 const subjects: Subject[] = ["Math", "Reading", "Science", "Spelling"];
 const starterIds = new Set(starterQuestions.map((question) => question.id));
 const blockedQuestionPattern = /\b(?:x|times|divided|multiply|multiplication|division|equal-groups)\b/i;
 
-type Screen = "home" | "quiz" | "results" | "parent";
+type Screen = "home" | "quiz" | "results" | "parent" | "profile";
 type QuizAnswer = {
   questionId: string;
   selectedIndex: number;
@@ -46,11 +50,56 @@ type StoredScore = {
   sessions: number;
 };
 
+type ProfileDraft = {
+  name: string;
+  age: number;
+  grade: 2;
+  parentNames: string;
+  siblingNames: string;
+  favorites: ProfileFavorites;
+};
+
 const subjectMeta: Record<Subject, { className: string; icon: React.ComponentType<{ size?: number }> }> = {
   Math: { className: "math", icon: Brain },
   Reading: { className: "reading", icon: BookOpen },
   Science: { className: "science", icon: FlaskConical },
   Spelling: { className: "spelling", icon: Sparkles },
+};
+
+const favoriteOptions = {
+  colors: ["blue", "pink", "purple", "green", "yellow", "red"],
+  animals: ["dog", "cat", "rabbit", "dolphin", "butterfly", "lion"],
+  activities: ["soccer", "dancing", "drawing", "reading", "building", "cooking"],
+  places: ["park", "library", "beach", "garden", "zoo", "playground"],
+  foods: ["pizza", "pasta", "apples", "pancakes", "cookies", "ice cream"],
+  styles: ["animals", "family", "school", "nature", "sports", "art"],
+} as const;
+
+const defaultFavorites: ProfileFavorites = {
+  colors: ["pink", "blue"],
+  animals: ["rabbit"],
+  activities: ["drawing", "reading"],
+  places: ["park", "library"],
+  foods: ["pancakes"],
+  styles: ["family", "nature"],
+  readingLevel: "normal",
+};
+
+const defaultProgress: ProfileProgress = {
+  score: { stars: 1250, sessions: 0 },
+  history: [],
+  recentIds: [],
+};
+
+const samairaProfile: LearnerProfile = {
+  id: "profile-samaira",
+  name: "Samaira",
+  age: 7,
+  grade: 2,
+  parentNames: ["Vaibhav", "Nitisha"],
+  siblingNames: ["Sahir"],
+  favorites: defaultFavorites,
+  avatarColor: "#ff5b85",
 };
 
 function safeRead<T>(key: string, fallback: T): T {
@@ -60,6 +109,121 @@ function safeRead<T>(key: string, fallback: T): T {
   } catch {
     return fallback;
   }
+}
+
+function cleanNameList(value: string) {
+  return value
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 4);
+}
+
+function makeDefaultProfileStore(): ProfileStore {
+  const legacyScore = safeRead<StoredScore>(SCORE_KEY, defaultProgress.score);
+  const legacyHistory = safeRead<QuizRun[]>(HISTORY_KEY, []);
+  const legacyRecentIds = safeRead<string[]>(RECENT_KEY, []);
+  return {
+    activeProfileId: samairaProfile.id,
+    profiles: [samairaProfile],
+    progressByProfile: {
+      [samairaProfile.id]: {
+        score: legacyScore,
+        history: legacyHistory,
+        recentIds: legacyRecentIds,
+      },
+    },
+  };
+}
+
+function normalizeProfileStore(store: ProfileStore | null): ProfileStore {
+  if (!store || !Array.isArray(store.profiles) || store.profiles.length === 0) {
+    return makeDefaultProfileStore();
+  }
+  const profiles = store.profiles.map((profile) => ({
+    ...samairaProfile,
+    ...profile,
+    name: profile.name || "Learner",
+    age: profile.age || 7,
+    grade: 2 as const,
+    parentNames: Array.isArray(profile.parentNames) ? profile.parentNames : [],
+    siblingNames: Array.isArray(profile.siblingNames) ? profile.siblingNames : [],
+    favorites: { ...defaultFavorites, ...profile.favorites },
+    avatarColor: profile.avatarColor || "#0c8df0",
+  }));
+  const progressByProfile = { ...store.progressByProfile };
+  profiles.forEach((profile) => {
+    progressByProfile[profile.id] = {
+      score: progressByProfile[profile.id]?.score ?? defaultProgress.score,
+      history: progressByProfile[profile.id]?.history ?? [],
+      recentIds: progressByProfile[profile.id]?.recentIds ?? [],
+    };
+  });
+  const activeProfileId = profiles.some((profile) => profile.id === store.activeProfileId) ? store.activeProfileId : profiles[0].id;
+  return { activeProfileId, profiles, progressByProfile };
+}
+
+function makeProfileDraft(): ProfileDraft {
+  return {
+    name: "",
+    age: 7,
+    grade: 2,
+    parentNames: "",
+    siblingNames: "",
+    favorites: { ...defaultFavorites, colors: [], animals: [], activities: [], places: [], foods: [], styles: [] },
+  };
+}
+
+function firstOrDefault(items: string[], fallback: string) {
+  return items.find(Boolean) ?? fallback;
+}
+
+function profileNameMap(profile: LearnerProfile) {
+  return new Map([
+    ["Samaira", profile.name],
+    ["Sahir", firstOrDefault(profile.siblingNames, "Sahir")],
+    ["Vaibhav", firstOrDefault(profile.parentNames, "Vaibhav")],
+    ["Nitisha", profile.parentNames[1] || firstOrDefault(profile.parentNames, "Nitisha")],
+  ]);
+}
+
+function replaceFamilyNames(text: string, profile: LearnerProfile) {
+  const replacements = profileNameMap(profile);
+  return text.replace(/\b(Samaira|Sahir|Vaibhav|Nitisha)\b/g, (match) => replacements.get(match) ?? match);
+}
+
+function favoriteFor(profile: LearnerProfile, key: keyof Omit<ProfileFavorites, "readingLevel">, fallback: string, seed: string) {
+  const values = profile.favorites[key];
+  if (!values.length) {
+    return fallback;
+  }
+  const index = Math.abs(seed.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0)) % values.length;
+  return values[index];
+}
+
+function personalizeQuestion(question: Question, profile: LearnerProfile): Question {
+  const favoriteActivity = favoriteFor(profile, "activities", "reading", question.id);
+  const favoritePlace = favoriteFor(profile, "places", "park", question.id);
+  const favoriteAnimal = favoriteFor(profile, "animals", "rabbit", question.id);
+  const favoriteFood = favoriteFor(profile, "foods", "apples", question.id);
+  let text = replaceFamilyNames(question.question, profile);
+
+  if (question.subject === "Math" && question.skill?.includes("addition") && text.startsWith("What is")) {
+    text = `${profile.name} is practicing math after ${favoriteActivity}. ${text}`;
+  } else if (question.subject === "Science" && !text.includes(profile.name)) {
+    text = `${profile.name} notices something at the ${favoritePlace}. ${text}`;
+  } else if (question.subject === "Spelling" && !text.includes(profile.name)) {
+    text = `${profile.name} is writing after seeing a ${favoriteAnimal}. ${text}`;
+  } else if (question.subject === "Reading" && question.skill === "reading-vocabulary" && !text.includes(profile.name)) {
+    text = `${profile.name} sees the word near some ${favoriteFood}. ${text}`;
+  }
+
+  return {
+    ...question,
+    question: text,
+    hint: replaceFamilyNames(question.hint, profile),
+    explanation: replaceFamilyNames(question.explanation, profile),
+  };
 }
 
 function makeQuestionId(question: Omit<Question, "id"> | Question, index: number) {
@@ -265,9 +429,7 @@ function App() {
     const imported = safeRead<Question[]>(STORAGE_KEY, []);
     return mergeQuestions(starterQuestions, imported.filter(isAllowedQuestion));
   });
-  const [recentIds, setRecentIds] = useState<string[]>(() => safeRead<string[]>(RECENT_KEY, []));
-  const [score, setScore] = useState<StoredScore>(() => safeRead<StoredScore>(SCORE_KEY, { stars: 1250, sessions: 0 }));
-  const [history, setHistory] = useState<QuizRun[]>(() => safeRead<QuizRun[]>(HISTORY_KEY, []));
+  const [profileStore, setProfileStore] = useState<ProfileStore>(() => normalizeProfileStore(safeRead<ProfileStore | null>(PROFILE_KEY, null)));
   const [session, setSession] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
@@ -276,7 +438,13 @@ function App() {
   const [parentUnlocked, setParentUnlocked] = useState(false);
   const [pin, setPin] = useState("");
   const [parentMessage, setParentMessage] = useState("Import AirDropped JSON packs or sync the hosted packs.");
+  const [profileDraft, setProfileDraft] = useState<ProfileDraft>(() => makeProfileDraft());
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const activeProfile = profileStore.profiles.find((profile) => profile.id === profileStore.activeProfileId) ?? profileStore.profiles[0];
+  const activeProgress = profileStore.progressByProfile[activeProfile.id] ?? defaultProgress;
+  const score = activeProgress.score;
+  const history = activeProgress.history;
+  const recentIds = activeProgress.recentIds;
 
   const counts = useMemo(() => {
     return subjects.reduce(
@@ -303,7 +471,8 @@ function App() {
     return { recent, average, strongest, needsPractice, bySubject };
   }, [history]);
 
-  const currentQuestion = session[currentIndex];
+  const rawCurrentQuestion = session[currentIndex];
+  const currentQuestion = rawCurrentQuestion ? personalizeQuestion(rawCurrentQuestion, activeProfile) : undefined;
   const correctCount = answers.filter((answer) => answer.correct).length;
 
   function persistQuestions(nextQuestions: Question[]) {
@@ -312,19 +481,9 @@ function App() {
     setQuestions(nextQuestions);
   }
 
-  function persistRecent(nextRecent: string[]) {
-    window.localStorage.setItem(RECENT_KEY, JSON.stringify(nextRecent));
-    setRecentIds(nextRecent);
-  }
-
-  function persistScore(nextScore: StoredScore) {
-    window.localStorage.setItem(SCORE_KEY, JSON.stringify(nextScore));
-    setScore(nextScore);
-  }
-
-  function persistHistory(nextHistory: QuizRun[]) {
-    window.localStorage.setItem(HISTORY_KEY, JSON.stringify(nextHistory));
-    setHistory(nextHistory);
+  function persistProfileStore(nextStore: ProfileStore) {
+    window.localStorage.setItem(PROFILE_KEY, JSON.stringify(nextStore));
+    setProfileStore(nextStore);
   }
 
   function startQuiz(subject: Subject) {
@@ -366,9 +525,18 @@ function App() {
         missedSkills: Array.from(new Set(missed.map((question) => question.skill).filter(Boolean) as string[])),
       };
       const nextRecent = [...session.map((question) => question.id), ...recentIds].slice(0, 120);
-      persistRecent(nextRecent);
-      persistScore({ stars: score.stars + earned, sessions: score.sessions + 1 });
-      persistHistory([run, ...history].slice(0, 100));
+      const nextStore = {
+        ...profileStore,
+        progressByProfile: {
+          ...profileStore.progressByProfile,
+          [activeProfile.id]: {
+            score: { stars: score.stars + earned, sessions: score.sessions + 1 },
+            history: [run, ...history].slice(0, 100),
+            recentIds: nextRecent,
+          },
+        },
+      };
+      persistProfileStore(nextStore);
       setScreen("results");
       return;
     }
@@ -380,11 +548,14 @@ function App() {
   async function importFile(file: File) {
     try {
       const text = await file.text();
-      const pack = JSON.parse(text) as QuestionPack;
+      const pack = JSON.parse(text) as QuestionPack & { profiles?: ProfileStore };
+      if (pack.profiles) {
+        persistProfileStore(normalizeProfileStore(pack.profiles));
+      }
       const normalized = normalizePack(pack);
       const next = mergeQuestions(questions, normalized);
       persistQuestions(next);
-      setParentMessage(`Imported ${normalized.length} questions from ${file.name}.`);
+      setParentMessage(`Imported ${normalized.length} questions${pack.profiles ? " and profiles" : ""} from ${file.name}.`);
     } catch (error) {
       setParentMessage(error instanceof Error ? error.message : "That file could not be imported.");
     }
@@ -422,6 +593,55 @@ function App() {
     setParentMessage("That PIN did not match.");
   }
 
+  function selectProfile(profileId: string, nextScreen: Screen = "home") {
+    persistProfileStore({ ...profileStore, activeProfileId: profileId });
+    setSession([]);
+    setCurrentIndex(0);
+    setAnswers([]);
+    setSelectedIndex(null);
+    setScreen(nextScreen);
+  }
+
+  function updateProfileDraftFavorite(key: keyof Omit<ProfileFavorites, "readingLevel">, value: string) {
+    const current = profileDraft.favorites[key];
+    const nextValues = current.includes(value) ? current.filter((item) => item !== value) : [...current, value];
+    setProfileDraft({
+      ...profileDraft,
+      favorites: { ...profileDraft.favorites, [key]: nextValues },
+    });
+  }
+
+  function addProfile() {
+    const name = profileDraft.name.trim();
+    if (!name) {
+      setParentMessage("Add a profile name first.");
+      return;
+    }
+    const id = `profile-${Date.now()}`;
+    const profile: LearnerProfile = {
+      id,
+      name,
+      age: profileDraft.age,
+      grade: 2,
+      parentNames: cleanNameList(profileDraft.parentNames),
+      siblingNames: cleanNameList(profileDraft.siblingNames),
+      favorites: profileDraft.favorites,
+      avatarColor: ["#0c8df0", "#35be45", "#7054cf", "#f4a900"][profileStore.profiles.length % 4],
+    };
+    const nextStore = {
+      activeProfileId: id,
+      profiles: [...profileStore.profiles, profile],
+      progressByProfile: {
+        ...profileStore.progressByProfile,
+        [id]: defaultProgress,
+      },
+    };
+    persistProfileStore(nextStore);
+    setProfileDraft(makeProfileDraft());
+    setParentMessage(`Added ${name}'s profile.`);
+    setScreen("home");
+  }
+
   return (
     <main className={`app-shell screen-${screen}`}>
       <div className="sky">
@@ -438,6 +658,22 @@ function App() {
             <button type="button" className="icon-button" aria-label="Open Parent Mode" onClick={() => setScreen("parent")}>
               <Lock size={26} />
             </button>
+            <div className="profile-switcher" aria-label="Profiles">
+              {profileStore.profiles.map((profile) => (
+                <button
+                  type="button"
+                  className={`profile-chip ${profile.id === activeProfile.id ? "active" : ""}`}
+                  key={profile.id}
+                  onClick={() => selectProfile(profile.id)}
+                >
+                  <span style={{ background: profile.avatarColor }}>{profile.name.charAt(0).toUpperCase()}</span>
+                  {profile.name}
+                </button>
+              ))}
+              <button type="button" className="profile-add" aria-label="Add profile" onClick={() => setScreen("profile")}>
+                <Plus size={24} />
+              </button>
+            </div>
             <div className="score-pills">
               <span className="pill">
                 <Star size={22} fill="currentColor" /> {score.stars}
@@ -447,10 +683,10 @@ function App() {
           </header>
 
           <div className="hero-copy">
-            <div className="avatar" aria-label="Samaira profile">
-              <span>S</span>
+            <div className="avatar" aria-label={`${activeProfile.name} profile`}>
+              <span style={{ background: activeProfile.avatarColor }}>{activeProfile.name.charAt(0).toUpperCase()}</span>
             </div>
-            <h1>Hi Samaira!</h1>
+            <h1>Hi {activeProfile.name}!</h1>
             <p>Ready to learn and have fun?</p>
             <span className="learning-badge">Grade 2 practice</span>
           </div>
@@ -553,7 +789,7 @@ function App() {
       {screen === "results" && (
         <section className="results-screen">
           <div className="confetti" aria-hidden="true" />
-          <h1>Great job, Samaira!</h1>
+          <h1>Great job, {activeProfile.name}!</h1>
           <p>
             You answered {correctCount} out of {SESSION_SIZE} questions correctly!
           </p>
@@ -645,6 +881,7 @@ function App() {
                       downloadJson("samaira-quiz-backup.json", {
                         title: "Samaira Quiz Backup",
                         questions,
+                        profiles: profileStore,
                       })
                     }
                   >
@@ -655,8 +892,24 @@ function App() {
               <div className="parent-card progress-card">
                 <div className="progress-summary">
                   <h2>
-                    <BarChart3 size={28} /> Progress
+                    <BarChart3 size={28} /> {activeProfile.name}'s Progress
                   </h2>
+                  <div className="parent-profile-list">
+                    {profileStore.profiles.map((profile) => (
+                      <button
+                        type="button"
+                        className={profile.id === activeProfile.id ? "selected" : ""}
+                        key={profile.id}
+                        onClick={() => selectProfile(profile.id, "parent")}
+                      >
+                        <span style={{ background: profile.avatarColor }}>{profile.name.charAt(0).toUpperCase()}</span>
+                        {profile.name}
+                      </button>
+                    ))}
+                    <button type="button" onClick={() => setScreen("profile")}>
+                      <Plus size={18} /> Add
+                    </button>
+                  </div>
                   <div className="metric-row">
                     <span>
                       <strong>{history.length}</strong>
@@ -711,6 +964,96 @@ function App() {
               </div>
             </>
           )}
+        </section>
+      )}
+
+      {screen === "profile" && (
+        <section className="profile-screen">
+          <header className="parent-header">
+            <button type="button" className="icon-button light" aria-label="Back to home" onClick={() => setScreen("home")}>
+              <ArrowLeft size={28} />
+            </button>
+            <h1>
+              <UserRound size={44} /> Add Profile
+            </h1>
+          </header>
+
+          <div className="profile-form-card">
+            <div className="profile-form-grid">
+              <label>
+                Child name
+                <input value={profileDraft.name} onChange={(event) => setProfileDraft({ ...profileDraft, name: event.target.value })} placeholder="Sahir" />
+              </label>
+              <label>
+                Age
+                <select value={profileDraft.age} onChange={(event) => setProfileDraft({ ...profileDraft, age: Number(event.target.value) })}>
+                  {[5, 6, 7, 8, 9].map((age) => (
+                    <option value={age} key={age}>
+                      {age}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Grade
+                <select value={profileDraft.grade} disabled>
+                  <option value={2}>Grade 2</option>
+                </select>
+              </label>
+              <label>
+                Parent names
+                <input value={profileDraft.parentNames} onChange={(event) => setProfileDraft({ ...profileDraft, parentNames: event.target.value })} placeholder="Vaibhav, Nitisha" />
+              </label>
+              <label>
+                Sibling names
+                <input value={profileDraft.siblingNames} onChange={(event) => setProfileDraft({ ...profileDraft, siblingNames: event.target.value })} placeholder="Samaira" />
+              </label>
+              <label>
+                Reading level
+                <select
+                  value={profileDraft.favorites.readingLevel}
+                  onChange={(event) =>
+                    setProfileDraft({
+                      ...profileDraft,
+                      favorites: { ...profileDraft.favorites, readingLevel: event.target.value as ProfileFavorites["readingLevel"] },
+                    })
+                  }
+                >
+                  <option value="easy">Easy</option>
+                  <option value="normal">Normal</option>
+                  <option value="challenge">Challenge</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="choice-sections">
+              {Object.entries(favoriteOptions).map(([key, options]) => (
+                <section key={key}>
+                  <h2>{key === "styles" ? "Question style" : `Favorite ${key}`}</h2>
+                  <div className="choice-chip-row">
+                    {options.map((option) => {
+                      const typedKey = key as keyof Omit<ProfileFavorites, "readingLevel">;
+                      const selected = profileDraft.favorites[typedKey].includes(option);
+                      return (
+                        <button type="button" className={selected ? "selected" : ""} key={option} onClick={() => updateProfileDraftFavorite(typedKey, option)}>
+                          {option}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </section>
+              ))}
+            </div>
+
+            <div className="profile-actions">
+              <button type="button" className="link-button" onClick={() => setProfileDraft(makeProfileDraft())}>
+                Skip optional choices
+              </button>
+              <button type="button" className="save-profile-button" onClick={addProfile}>
+                <Save size={22} /> Save Profile
+              </button>
+            </div>
+          </div>
         </section>
       )}
     </main>

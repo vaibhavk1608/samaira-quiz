@@ -19,7 +19,8 @@
 }
 
 .app-shell button:focus-visible,
-.app-shell input:focus-visible {
+.app-shell input:focus-visible,
+.app-shell select:focus-visible {
   outline: 4px solid rgba(31, 125, 255, 0.35);
   outline-offset: 3px;
 }
@@ -141,6 +142,57 @@
   display: flex;
   align-items: center;
   gap: 18px;
+}
+
+.profile-switcher {
+  display: flex;
+  max-width: min(52vw, 560px);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.profile-chip,
+.profile-add,
+.parent-profile-list button {
+  display: inline-flex;
+  min-height: 44px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  color: #31516f;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(42, 83, 130, 0.13);
+  white-space: nowrap;
+}
+
+.profile-chip.active,
+.parent-profile-list button.selected {
+  color: #fff;
+  background: #0c8df0;
+}
+
+.profile-chip span,
+.parent-profile-list span {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 950;
+}
+
+.profile-add {
+  width: 44px;
+  padding: 0;
+  color: #0c8df0;
 }
 
 .pill {
@@ -615,6 +667,18 @@
     linear-gradient(180deg, #e6fff5, #f8fffb);
 }
 
+.profile-screen {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 28px clamp(18px, 4vw, 46px) 46px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 210, 63, 0.2) 0 44px, transparent 45px),
+    radial-gradient(circle at 90% 18%, rgba(31, 172, 245, 0.16) 0 48px, transparent 49px),
+    linear-gradient(180deg, #f2fbff, #fff8fd);
+}
+
 .parent-header {
   max-width: 980px;
   margin: 0 auto 28px;
@@ -770,6 +834,13 @@
   gap: 10px;
 }
 
+.parent-profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
 .metric-row span {
   display: grid;
   min-height: 72px;
@@ -863,6 +934,102 @@
   background: transparent;
 }
 
+.profile-form-card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 30px);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 18px 32px rgba(49, 85, 124, 0.12);
+}
+
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.profile-form-grid label {
+  display: grid;
+  gap: 8px;
+  color: #38506a;
+  font-weight: 900;
+}
+
+.profile-form-grid input,
+.profile-form-grid select {
+  min-height: 54px;
+  box-sizing: border-box;
+  border: 3px solid #d9eff1;
+  border-radius: 18px;
+  padding: 0 14px;
+  color: #17244a;
+  background: #fff;
+  font: inherit;
+  font-weight: 800;
+}
+
+.choice-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.choice-sections section {
+  padding: 16px;
+  border-radius: 20px;
+  background: #f4fbff;
+}
+
+.choice-sections h2 {
+  margin: 0 0 12px;
+  color: #173052;
+  font-size: 1.08rem;
+  font-weight: 950;
+  text-transform: capitalize;
+}
+
+.choice-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choice-chip-row button {
+  min-height: 42px;
+  padding: 0 16px;
+  color: #31516f;
+  background: #fff;
+  box-shadow: inset 0 0 0 2px rgba(12, 141, 240, 0.12);
+}
+
+.choice-chip-row button.selected {
+  color: #fff;
+  background: #7054cf;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.save-profile-button {
+  display: inline-flex;
+  min-width: 190px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 24px;
+  color: #fff;
+  background: #35be45;
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 860px) {
   .home-screen {
     padding-bottom: 40px;
@@ -876,7 +1043,9 @@
 
   .subject-grid,
   .answers-grid,
-  .parent-tools {
+  .parent-tools,
+  .profile-form-grid,
+  .choice-sections {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -893,13 +1062,21 @@
     gap: 10px;
     text-align: center;
   }
+
+  .profile-switcher {
+    order: 3;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
   .subject-grid,
   .answers-grid,
   .parent-tools,
-  .metric-row {
+  .metric-row,
+  .profile-form-grid,
+  .choice-sections {
     grid-template-columns: 1fr;
   }
 

@@ -6,6 +6,7 @@
   "scripts": {
     "generate:questions": "node scripts/generate-questions.mjs",
     "check:operations": "node scripts/check-operations.mjs",
+    "qc:profiles": "node scripts/qc-profiles.mjs",
     "qc:questions": "node scripts/qc-questions.mjs",
     "dev": "vite",
     "build": "tsc -b && vite build",

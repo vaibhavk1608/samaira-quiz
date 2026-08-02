@@ -32,3 +32,41 @@ export type QuizRun = {
   missedQuestionIds: string[];
   missedSkills: string[];
 };
+
+export type ReadingLevel = "easy" | "normal" | "challenge";
+
+export type ProfileFavorites = {
+  colors: string[];
+  animals: string[];
+  activities: string[];
+  places: string[];
+  foods: string[];
+  styles: string[];
+  readingLevel: ReadingLevel;
+};
+
+export type LearnerProfile = {
+  id: string;
+  name: string;
+  age: number;
+  grade: Grade;
+  parentNames: string[];
+  siblingNames: string[];
+  favorites: ProfileFavorites;
+  avatarColor: string;
+};
+
+export type ProfileProgress = {
+  score: {
+    stars: number;
+    sessions: number;
+  };
+  history: QuizRun[];
+  recentIds: string[];
+};
+
+export type ProfileStore = {
+  activeProfileId: string;
+  profiles: LearnerProfile[];
+  progressByProfile: Record<string, ProfileProgress>;
+};
