@@ -108,6 +108,11 @@
   justify-content: space-between;
 }
 
+.top-bar {
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .home-screen,
 .quiz-screen,
 .results-screen,
@@ -154,6 +159,11 @@
   padding: 6px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.48);
+  scrollbar-width: none;
+}
+
+.profile-switcher::-webkit-scrollbar {
+  display: none;
 }
 
 .profile-chip,
@@ -1071,6 +1081,36 @@
 }
 
 @media (max-width: 620px) {
+  .app-shell {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .home-screen {
+    padding: max(18px, env(safe-area-inset-top)) 16px 34px;
+  }
+
+  .sun {
+    top: 96px;
+    left: 50%;
+    width: 126px;
+    height: 126px;
+    opacity: 0.82;
+    transform: translateX(-50%);
+  }
+
+  .cloud-one {
+    top: 188px;
+    left: -52px;
+    width: 210px;
+  }
+
+  .cloud-two {
+    top: 174px;
+    right: -42px;
+    width: 170px;
+  }
+
   .subject-grid,
   .answers-grid,
   .parent-tools,
@@ -1085,6 +1125,22 @@
     gap: 12px;
   }
 
+  .top-bar {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) minmax(118px, auto);
+    align-items: center;
+  }
+
+  .icon-button {
+    width: 56px;
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .score-pills {
+    justify-content: end;
+  }
+
   .score-pills {
     gap: 8px;
   }
@@ -1094,16 +1150,192 @@
     padding: 0 12px;
   }
 
+  .profile-switcher {
+    grid-column: 1 / -1;
+    order: 0;
+    justify-content: flex-start;
+    margin-top: 2px;
+    padding: 4px;
+  }
+
+  .profile-chip,
+  .profile-add,
+  .parent-profile-list button {
+    min-height: 40px !important;
+    padding: 0 10px;
+    font-size: 0.92rem;
+  }
+
+  .profile-chip span,
+  .parent-profile-list span {
+    width: 24px;
+    height: 24px;
+    font-size: 0.78rem;
+  }
+
+  .profile-add {
+    width: 40px;
+    min-width: 40px;
+  }
+
+  .hero-copy {
+    margin: 4px auto 22px;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-width: 6px;
+    margin-top: 2px;
+    transform: none;
+  }
+
+  .avatar span {
+    width: 34px;
+    height: 28px;
+    transform: translateY(38px);
+  }
+
+  .hero-copy h1 {
+    margin: 28px 0 8px;
+    font-size: clamp(2.7rem, 13vw, 4.1rem);
+    line-height: 0.98;
+  }
+
+  .hero-copy p {
+    margin-bottom: 12px;
+    font-size: 1.18rem;
+  }
+
+  .learning-badge {
+    min-height: 36px;
+    padding: 0 18px;
+    font-size: 0.96rem;
+  }
+
+  .subject-grid {
+    gap: 16px;
+  }
+
+  .subject-card {
+    min-height: 204px;
+    padding: 18px 18px 16px;
+    border-radius: 20px;
+  }
+
+  .subject-card h2 {
+    font-size: 2rem;
+  }
+
+  .subject-icon {
+    width: 82px;
+    height: 82px;
+    border-radius: 22px;
+  }
+
+  .subject-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .subject-card p {
+    font-size: 0.86rem;
+  }
+
+  .subject-card button {
+    width: min(180px, 76%);
+    min-height: 50px;
+  }
+
+  .ground {
+    bottom: -150px;
+    height: 200px;
+  }
+
+  .quiz-screen {
+    padding-bottom: 28px;
+  }
+
+  .quiz-header {
+    min-height: 76px;
+    padding: 0 14px;
+  }
+
+  .quiz-header h1 {
+    max-width: 44vw;
+    overflow: hidden;
+    font-size: 1.2rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .score-pills.compact .pill {
+    min-width: 70px;
+  }
+
   .question-card {
     margin: 0 14px;
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+
+  .question-card h2 {
+    margin-bottom: 20px;
+    font-size: clamp(1.6rem, 8.8vw, 2.35rem);
   }
 
   .answer {
     min-height: 88px;
-    font-size: clamp(1.7rem, 8vw, 2.6rem);
+    border-radius: 18px;
+    font-size: clamp(1.65rem, 8vw, 2.35rem);
   }
 
   .lesson-box {
     flex-direction: column;
+    min-height: 86px;
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  .lesson-box.correct-feedback,
+  .lesson-box.wrong-feedback {
+    padding: 16px;
+  }
+
+  .feedback-copy {
+    text-align: center;
+  }
+
+  .next-button,
+  .hint-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-screen {
+    padding-inline: 12px;
+  }
+
+  .top-bar {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .score-pills {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .profile-switcher {
+    justify-content: center;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.45rem, 12vw, 3.3rem);
+  }
+
+  .subject-card {
+    min-height: 192px;
   }
 }
