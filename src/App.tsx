@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   BarChart3,
@@ -35,7 +35,6 @@ const PROFILE_KEY = "samaira-quiz-profiles";
 const PARENT_PIN = "2468";
 const SESSION_SIZE = 15;
 const subjects: Subject[] = ["Math", "Reading", "Science", "Spelling"];
-const starterIds = new Set(starterQuestions.map((question) => question.id));
 const blockedQuestionPattern = /\b(?:x|times|divided|multiply|multiplication|division|equal-groups)\b/i;
 
 type Screen = "home" | "quiz" | "results" | "parent" | "profile";
@@ -201,21 +200,60 @@ function favoriteFor(profile: LearnerProfile, key: keyof Omit<ProfileFavorites, 
   return values[index];
 }
 
+function seededIndex(seed: string, length: number) {
+  return Math.abs(seed.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0)) % length;
+}
+
 function personalizeQuestion(question: Question, profile: LearnerProfile): Question {
   const favoriteActivity = favoriteFor(profile, "activities", "reading", question.id);
   const favoritePlace = favoriteFor(profile, "places", "park", question.id);
-  const favoriteAnimal = favoriteFor(profile, "animals", "rabbit", question.id);
   const favoriteFood = favoriteFor(profile, "foods", "apples", question.id);
   let text = replaceFamilyNames(question.question, profile);
 
   if (question.subject === "Math" && question.skill?.includes("addition") && text.startsWith("What is")) {
     text = `${profile.name} is practicing math after ${favoriteActivity}. ${text}`;
   } else if (question.subject === "Science" && !text.includes(profile.name)) {
-    text = `${profile.name} notices something at the ${favoritePlace}. ${text}`;
+    const sibling = firstOrDefault(profile.siblingNames, "Sahir");
+    const parent = firstOrDefault(profile.parentNames, "Vaibhav");
+    const openers = [
+      `${profile.name} notices something at the ${favoritePlace}. `,
+      `${sibling} asks a science question. `,
+      `${parent} helps with a science notebook. `,
+      `${profile.name} observes carefully. `,
+      `${profile.name} thinks like a scientist. `,
+      `${sibling} and ${profile.name} explore science. `,
+      `${profile.name} checks a tiny clue. `,
+      `${parent} asks what ${profile.name} observes. `,
+      `${sibling} points to an experiment. `,
+      `${profile.name} looks for evidence. `,
+      `${profile.name} makes a smart guess. `,
+      `${sibling} shares a science fact. `,
+    ];
+    text = `${openers[seededIndex(question.id, openers.length)]}${text}`;
   } else if (question.subject === "Spelling" && !text.includes(profile.name)) {
-    text = `${profile.name} is writing after seeing a ${favoriteAnimal}. ${text}`;
+    const sibling = firstOrDefault(profile.siblingNames, "Sahir");
+    const parent = firstOrDefault(profile.parentNames, "Vaibhav");
+    const openers = [
+      `${profile.name} practices spelling. `,
+      `${profile.name} reads a word card. `,
+      `${sibling} says a word for ${profile.name}. `,
+      `${parent} points to a spelling clue. `,
+      `${profile.name} writes in a notebook. `,
+      `${profile.name} checks each letter. `,
+    ];
+    text = `${openers[seededIndex(question.id, openers.length)]}${text}`;
   } else if (question.subject === "Reading" && question.skill === "reading-vocabulary" && !text.includes(profile.name)) {
-    text = `${profile.name} sees the word near some ${favoriteFood}. ${text}`;
+    const sibling = firstOrDefault(profile.siblingNames, "Sahir");
+    const parent = firstOrDefault(profile.parentNames, "Vaibhav");
+    const openers = [
+      `${profile.name} reads a vocabulary card. `,
+      `${sibling} asks about a word. `,
+      `${parent} points to a word near some ${favoriteFood}. `,
+      `${profile.name} practices reading at the ${favoritePlace}. `,
+      `${profile.name} looks closely at the word. `,
+      `${sibling} and ${profile.name} read together. `,
+    ];
+    text = `${openers[seededIndex(question.id, openers.length)]}${text}`;
   }
 
   return {
@@ -269,14 +307,22 @@ function normalizePack(pack: QuestionPack): Question[] {
       hint: item.hint ? String(item.hint) : "Think about what the question is asking.",
       explanation: item.explanation ? String(item.explanation) : "Nice effort. Review the correct answer and try another one.",
       skill: item.skill ? String(item.skill) : undefined,
-      source: "imported",
+      source: item.source === "starter" ? "starter" : "imported",
     };
   });
 }
 
 function mergeQuestions(existing: Question[], incoming: Question[]) {
   const byId = new Map(existing.map((question) => [question.id, question]));
-  incoming.filter(isAllowedQuestion).forEach((question) => byId.set(question.id, question));
+  const promptKeys = new Set(existing.map((question) => `${question.subject}:${question.question.toLowerCase()}`));
+  incoming.filter(isAllowedQuestion).forEach((question) => {
+    const promptKey = `${question.subject}:${question.question.toLowerCase()}`;
+    if (!byId.has(question.id) && promptKeys.has(promptKey)) {
+      return;
+    }
+    byId.set(question.id, question);
+    promptKeys.add(promptKey);
+  });
   return Array.from(byId.values());
 }
 
@@ -388,7 +434,7 @@ function generatePracticeQuestions(missed: Question[], existingQuestions: Questi
         subject: base.subject,
         source: "practice",
         skill: base.skill ?? (base.subject === "Spelling" ? "spelling-review" : "reading-review"),
-        question: base.subject === "Spelling" ? "Which word is spelled correctly?" : `Which word matches "${correct}"?`,
+        question: base.subject === "Spelling" ? `Review spelling: Which choice spells "${correct}" correctly?` : `Review reading: Which choice matches "${correct}"?`,
         ...choiceSet(correct, [`${correct}e`, correct.slice(0, -1), `${correct}${correct.at(-1)}`].filter(Boolean), missedIndex),
         hint: "Look at each letter carefully.",
         explanation: `"${correct}" is the correct answer.`,
@@ -427,7 +473,10 @@ function App() {
   const [screen, setScreen] = useState<Screen>("home");
   const [questions, setQuestions] = useState<Question[]>(() => {
     const imported = safeRead<Question[]>(STORAGE_KEY, []);
-    return mergeQuestions(starterQuestions, imported.filter(isAllowedQuestion));
+    return mergeQuestions(
+      starterQuestions,
+      imported.filter((question) => isAllowedQuestion(question) && question.source !== "practice"),
+    );
   });
   const [profileStore, setProfileStore] = useState<ProfileStore>(() => normalizeProfileStore(safeRead<ProfileStore | null>(PROFILE_KEY, null)));
   const [session, setSession] = useState<Question[]>([]);
@@ -475,8 +524,31 @@ function App() {
   const currentQuestion = rawCurrentQuestion ? personalizeQuestion(rawCurrentQuestion, activeProfile) : undefined;
   const correctCount = answers.filter((answer) => answer.correct).length;
 
+  useEffect(() => {
+    let cancelled = false;
+    async function loadHostedQuestions() {
+      try {
+        const response = await fetch(`${import.meta.env.BASE_URL}question-packs/samaira-grade-2-pack.json`, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Hosted question pack did not load.");
+        }
+        const hostedPack = (await response.json()) as QuestionPack;
+        const hostedQuestions = normalizePack(hostedPack);
+        if (!cancelled) {
+          setQuestions((current) => mergeQuestions(hostedQuestions, current));
+        }
+      } catch {
+        // Keep any locally cached/imported questions available if the hosted pack cannot load.
+      }
+    }
+    void loadHostedQuestions();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   function persistQuestions(nextQuestions: Question[]) {
-    const importedOnly = nextQuestions.filter((question) => !starterIds.has(question.id));
+    const importedOnly = nextQuestions.filter((question) => question.source !== "starter");
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(importedOnly));
     setQuestions(nextQuestions);
   }
@@ -488,6 +560,10 @@ function App() {
 
   function startQuiz(subject: Subject) {
     const nextSession = pickSession(questions, subject, recentIds);
+    if (nextSession.length < SESSION_SIZE) {
+      setParentMessage("Questions are still loading. Try again in a moment.");
+      return;
+    }
     setSession(nextSession);
     setCurrentIndex(0);
     setAnswers([]);
@@ -700,9 +776,9 @@ function App() {
                   <div className="subject-icon" aria-hidden="true">
                     <Icon size={72} />
                   </div>
-                  <p>{counts[subject]} mixed questions</p>
-                  <button type="button" onClick={() => startQuiz(subject)}>
-                    Start
+                  <p>{counts[subject] >= SESSION_SIZE ? `${counts[subject]} mixed questions` : "Loading questions"}</p>
+                  <button type="button" onClick={() => startQuiz(subject)} disabled={counts[subject] < SESSION_SIZE}>
+                    {counts[subject] >= SESSION_SIZE ? "Start" : "Loading"}
                   </button>
                 </article>
               );

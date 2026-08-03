@@ -1,5 +1,5 @@
-const CACHE_NAME = "samaira-quiz-v8-responsive";
-const APP_SHELL = ["./", "./manifest.webmanifest", "./quiz-icon.svg"];
+const CACHE_NAME = "samaira-quiz-v9-question-quality";
+const APP_SHELL = ["./", "./manifest.webmanifest", "./quiz-icon.svg", "./question-packs/samaira-grade-2-pack.json"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));

@@ -1,15 +1,23 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
-const source = readFileSync("src/data/questionBank.ts", "utf8");
-const json = source.match(/export const starterQuestions: Question\[] = ([\s\S]*);\n/)?.[1];
-
-if (!json) {
-  throw new Error("Could not read starter question bank.");
+function readQuestions() {
+  if (existsSync("src/data/questionBank.json")) {
+    return JSON.parse(readFileSync("src/data/questionBank.json", "utf8"));
+  }
+  const source = readFileSync("src/data/questionBank.ts", "utf8");
+  const arrayLiteral = source.match(/export const starterQuestions: Question\[] = ([\s\S]*);\n/)?.[1];
+  const jsonStringLiteral = source.match(/const questionJson = ([\s\S]*?);\n/)?.[1];
+  if (!arrayLiteral && !jsonStringLiteral) {
+    throw new Error("Could not read starter question bank.");
+  }
+  return arrayLiteral ? JSON.parse(arrayLiteral) : JSON.parse(JSON.parse(jsonStringLiteral));
 }
 
-const questions = JSON.parse(json);
+const questions = readQuestions();
 const subjects = ["Math", "Reading", "Science", "Spelling"];
 const sessionSize = 15;
+const expectedTotal = 1600;
+const expectedPerSubject = 400;
 
 function assert(condition, message) {
   if (!condition) {
@@ -17,15 +25,17 @@ function assert(condition, message) {
   }
 }
 
-assert(questions.length === 500, `Expected 500 questions, found ${questions.length}.`);
-assert(questions.filter((question) => question.grade === 2).length === 500, "Expected 500 Grade 2 questions.");
+assert(questions.length === expectedTotal, `Expected ${expectedTotal} questions, found ${questions.length}.`);
+assert(questions.filter((question) => question.grade === 2).length === expectedTotal, `Expected ${expectedTotal} Grade 2 questions.`);
 assert(!questions.some((question) => question.grade !== 2), "Only Grade 2 questions should remain.");
 assert(!questions.some((question) => /\b(?:x|times|divided|multiply|multiplication|division|equal-groups)\b/i.test(`${question.question} ${question.skill ?? ""}`)), "Multiplication or division wording remains.");
 
 for (const subject of subjects) {
   const pool = questions.filter((question) => question.subject === subject);
+  assert(pool.length === expectedPerSubject, `${subject} should contain ${expectedPerSubject} questions.`);
   assert(pool.length >= sessionSize, `${subject} needs at least ${sessionSize} questions.`);
   assert(pool.every((question) => question.grade === 2), `${subject} should only contain Grade 2 questions.`);
+  assert(new Set(pool.map((question) => question.question)).size === expectedPerSubject, `${subject} should not repeat exact question prompts.`);
 }
 
 for (const [index, question] of questions.entries()) {
@@ -33,13 +43,14 @@ for (const [index, question] of questions.entries()) {
   assert(subjects.includes(question.subject), `${question.id} has invalid subject.`);
   assert(typeof question.question === "string" && question.question.length > 0, `${question.id} has no question text.`);
   assert(Array.isArray(question.choices) && question.choices.length === 4, `${question.id} needs four choices.`);
+  assert(new Set(question.choices).size === 4, `${question.id} needs four unique choices.`);
   assert(Number.isInteger(question.answerIndex) && question.answerIndex >= 0 && question.answerIndex <= 3, `${question.id} has invalid answerIndex.`);
   assert(question.choices[question.answerIndex], `${question.id} has no correct choice.`);
   assert(question.hint && question.explanation, `${question.id} needs hint and explanation.`);
 }
 
 const mixedPack = JSON.parse(readFileSync("public/question-packs/samaira-grade-2-pack.json", "utf8"));
-assert(mixedPack.questions.length === 500, "Hosted mixed pack should contain 500 questions.");
+assert(mixedPack.questions.length === expectedTotal, `Hosted mixed pack should contain ${expectedTotal} questions.`);
 
 const sampleRun = {
   id: "run-test",
