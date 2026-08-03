@@ -31,6 +31,24 @@ export type QuizRun = {
   starsEarned: number;
   missedQuestionIds: string[];
   missedSkills: string[];
+  missedDetails?: MissedQuestionDetail[];
+};
+
+export type MissedQuestionDetail = {
+  questionId: string;
+  subject: Subject;
+  skill?: string;
+  question: string;
+  choices: string[];
+  selectedAnswer: string;
+  correctAnswer: string;
+  explanation: string;
+};
+
+export type RewardStats = {
+  gamesPlayed: number;
+  gamesWon: number;
+  bonusStars: number;
 };
 
 export type ReadingLevel = "easy" | "normal" | "challenge";
@@ -63,6 +81,7 @@ export type ProfileProgress = {
   };
   history: QuizRun[];
   recentIds: string[];
+  rewardStats: RewardStats;
 };
 
 export type ProfileStore = {

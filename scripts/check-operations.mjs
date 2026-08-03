@@ -61,9 +61,54 @@ const sampleRun = {
   starsEarned: 120,
   missedQuestionIds: ["sample"],
   missedSkills: ["addition-under-20"],
+  missedDetails: [
+    {
+      questionId: "sample",
+      subject: "Math",
+      skill: "addition-under-20",
+      question: "What is 8 + 5?",
+      choices: ["11", "13", "12", "10"],
+      selectedAnswer: "11",
+      correctAnswer: "13",
+      explanation: "8 + 5 = 13.",
+    },
+  ],
 };
 
 assert(sampleRun.score <= sampleRun.total, "Progress run score cannot exceed total.");
 assert(sampleRun.starsEarned === sampleRun.score * 10, "Stars earned should match score x 10.");
+assert(sampleRun.missedDetails[0].selectedAnswer === "11", "Missed detail should store selected answer.");
+assert(sampleRun.missedDetails[0].correctAnswer === "13", "Missed detail should store correct answer.");
+
+function rewardUnlocked(score, total) {
+  return score / total >= 0.9;
+}
+
+assert(rewardUnlocked(14, 15), "14/15 should unlock reward.");
+assert(rewardUnlocked(15, 15), "15/15 should unlock reward.");
+assert(!rewardUnlocked(13, 15), "13/15 should not unlock reward.");
+
+function winnerFor(board) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (const [a, b, c] of lines) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+  return null;
+}
+
+assert(winnerFor(["X", "X", "X", null, null, null, null, null, null]) === "X", "Tic Tac Toe should detect kid row win.");
+assert(winnerFor(["O", null, null, "O", null, null, "O", null, null]) === "O", "Tic Tac Toe should detect app column win.");
+assert(winnerFor(["X", null, "O", null, "X", null, "O", null, "X"]) === "X", "Tic Tac Toe should detect diagonal win.");
 
 console.log("Operations check passed.");

@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 import { starterQuestions } from "./data/questionBank";
-import type { LearnerProfile, ProfileFavorites, ProfileProgress, ProfileStore, Question, QuestionPack, QuizRun, Subject } from "./types";
+import type { LearnerProfile, MissedQuestionDetail, ProfileFavorites, ProfileProgress, ProfileStore, Question, QuestionPack, QuizRun, Subject } from "./types";
 
 const STORAGE_KEY = "samaira-quiz-questions";
 const RECENT_KEY = "samaira-quiz-recent";
@@ -34,14 +34,30 @@ const HISTORY_KEY = "samaira-quiz-history";
 const PROFILE_KEY = "samaira-quiz-profiles";
 const PARENT_PIN = "2468";
 const SESSION_SIZE = 15;
+const REWARD_THRESHOLD = 14;
 const subjects: Subject[] = ["Math", "Reading", "Science", "Spelling"];
 const blockedQuestionPattern = /\b(?:x|times|divided|multiply|multiplication|division|equal-groups)\b/i;
 
-type Screen = "home" | "quiz" | "results" | "parent" | "profile";
+type Screen = "home" | "quiz" | "results" | "parent" | "profile" | "reward";
 type QuizAnswer = {
   questionId: string;
   selectedIndex: number;
   correct: boolean;
+};
+
+type BoardCell = "X" | "O" | null;
+type RoundOutcome = "kid" | "app" | "tie" | null;
+
+type RewardGame = {
+  board: BoardCell[];
+  kidWins: number;
+  appWins: number;
+  ties: number;
+  round: number;
+  outcome: RoundOutcome;
+  seriesDone: boolean;
+  bonusAwarded: boolean;
+  message: string;
 };
 
 type StoredScore = {
@@ -88,6 +104,7 @@ const defaultProgress: ProfileProgress = {
   score: { stars: 1250, sessions: 0 },
   history: [],
   recentIds: [],
+  rewardStats: { gamesPlayed: 0, gamesWon: 0, bonusStars: 0 },
 };
 
 const samairaProfile: LearnerProfile = {
@@ -130,6 +147,7 @@ function makeDefaultProfileStore(): ProfileStore {
         score: legacyScore,
         history: legacyHistory,
         recentIds: legacyRecentIds,
+        rewardStats: defaultProgress.rewardStats,
       },
     },
   };
@@ -156,6 +174,7 @@ function normalizeProfileStore(store: ProfileStore | null): ProfileStore {
       score: progressByProfile[profile.id]?.score ?? defaultProgress.score,
       history: progressByProfile[profile.id]?.history ?? [],
       recentIds: progressByProfile[profile.id]?.recentIds ?? [],
+      rewardStats: progressByProfile[profile.id]?.rewardStats ?? defaultProgress.rewardStats,
     };
   });
   const activeProfileId = profiles.some((profile) => profile.id === store.activeProfileId) ? store.activeProfileId : profiles[0].id;
@@ -459,6 +478,71 @@ function generatePracticeQuestions(missed: Question[], existingQuestions: Questi
   return generated;
 }
 
+function makeRewardGame(): RewardGame {
+  return {
+    board: Array<BoardCell>(9).fill(null),
+    kidWins: 0,
+    appWins: 0,
+    ties: 0,
+    round: 1,
+    outcome: null,
+    seriesDone: false,
+    bonusAwarded: false,
+    message: "Your turn. Try to get three in a row!",
+  };
+}
+
+function winnerFor(board: BoardCell[]) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (const [a, b, c] of lines) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+  return null;
+}
+
+function openMoves(board: BoardCell[]) {
+  return board.map((cell, index) => (cell ? -1 : index)).filter((index) => index >= 0);
+}
+
+function findWinningMove(board: BoardCell[], mark: "X" | "O") {
+  return openMoves(board).find((move) => {
+    const next = [...board];
+    next[move] = mark;
+    return winnerFor(next) === mark;
+  });
+}
+
+function pickAppMove(board: BoardCell[]) {
+  const win = findWinningMove(board, "O");
+  if (win !== undefined) {
+    return win;
+  }
+  const block = findWinningMove(board, "X");
+  if (block !== undefined && Math.random() > 0.18) {
+    return block;
+  }
+  if (!board[4] && Math.random() > 0.2) {
+    return 4;
+  }
+  const corners = [0, 2, 6, 8].filter((index) => !board[index]);
+  if (corners.length && Math.random() > 0.25) {
+    return corners[Math.floor(Math.random() * corners.length)];
+  }
+  const moves = openMoves(board);
+  return moves[Math.floor(Math.random() * moves.length)];
+}
+
 function downloadJson(filename: string, payload: unknown) {
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -488,6 +572,7 @@ function App() {
   const [pin, setPin] = useState("");
   const [parentMessage, setParentMessage] = useState("Import AirDropped JSON packs or sync the hosted packs.");
   const [profileDraft, setProfileDraft] = useState<ProfileDraft>(() => makeProfileDraft());
+  const [rewardGame, setRewardGame] = useState<RewardGame>(() => makeRewardGame());
   const fileInputRef = useRef<HTMLInputElement>(null);
   const activeProfile = profileStore.profiles.find((profile) => profile.id === profileStore.activeProfileId) ?? profileStore.profiles[0];
   const activeProgress = profileStore.progressByProfile[activeProfile.id] ?? defaultProgress;
@@ -523,6 +608,8 @@ function App() {
   const rawCurrentQuestion = session[currentIndex];
   const currentQuestion = rawCurrentQuestion ? personalizeQuestion(rawCurrentQuestion, activeProfile) : undefined;
   const correctCount = answers.filter((answer) => answer.correct).length;
+  const rewardUnlocked = correctCount >= REWARD_THRESHOLD;
+  const reviewRuns = history.slice(0, 25);
 
   useEffect(() => {
     let cancelled = false;
@@ -582,10 +669,34 @@ function App() {
     setAnswers(nextAnswers);
   }
 
+  function missedDetailsForRun(): MissedQuestionDetail[] {
+    const answerById = new Map(answers.map((answer) => [answer.questionId, answer]));
+    const details: MissedQuestionDetail[] = [];
+    session.forEach((question) => {
+      const answer = answerById.get(question.id);
+      if (!answer || answer.correct) {
+        return;
+      }
+      const shownQuestion = personalizeQuestion(question, activeProfile);
+      details.push({
+        questionId: question.id,
+        subject: question.subject,
+        skill: question.skill,
+        question: shownQuestion.question,
+        choices: shownQuestion.choices,
+        selectedAnswer: shownQuestion.choices[answer.selectedIndex] ?? "No answer",
+        correctAnswer: shownQuestion.choices[shownQuestion.answerIndex],
+        explanation: shownQuestion.explanation,
+      });
+    });
+    return details;
+  }
+
   function nextQuestion() {
     if (currentIndex + 1 >= session.length) {
       const earned = correctCount * 10;
       const missed = session.filter((question) => answers.some((answer) => answer.questionId === question.id && !answer.correct));
+      const missedDetails = missedDetailsForRun();
       const practiceQuestions = generatePracticeQuestions(missed, questions);
       if (practiceQuestions.length > 0) {
         persistQuestions(mergeQuestions(questions, practiceQuestions));
@@ -599,6 +710,7 @@ function App() {
         starsEarned: earned,
         missedQuestionIds: missed.map((question) => question.id),
         missedSkills: Array.from(new Set(missed.map((question) => question.skill).filter(Boolean) as string[])),
+        missedDetails,
       };
       const nextRecent = [...session.map((question) => question.id), ...recentIds].slice(0, 120);
       const nextStore = {
@@ -609,6 +721,7 @@ function App() {
             score: { stars: score.stars + earned, sessions: score.sessions + 1 },
             history: [run, ...history].slice(0, 100),
             recentIds: nextRecent,
+            rewardStats: activeProgress.rewardStats ?? defaultProgress.rewardStats,
           },
         },
       };
@@ -619,6 +732,103 @@ function App() {
     setCurrentIndex(currentIndex + 1);
     setSelectedIndex(null);
     setShowHint(false);
+  }
+
+  function startRewardGame() {
+    setRewardGame(makeRewardGame());
+    setScreen("reward");
+  }
+
+  function persistRewardResult(finalGame: RewardGame) {
+    const kidWon = finalGame.kidWins > finalGame.appWins;
+    const bonus = kidWon && !finalGame.bonusAwarded ? 50 : 0;
+    const nextStore = {
+      ...profileStore,
+      progressByProfile: {
+        ...profileStore.progressByProfile,
+        [activeProfile.id]: {
+          ...activeProgress,
+          score: { ...score, stars: score.stars + bonus },
+          rewardStats: {
+            gamesPlayed: (activeProgress.rewardStats?.gamesPlayed ?? 0) + 1,
+            gamesWon: (activeProgress.rewardStats?.gamesWon ?? 0) + (kidWon ? 1 : 0),
+            bonusStars: (activeProgress.rewardStats?.bonusStars ?? 0) + bonus,
+          },
+        },
+      },
+    };
+    persistProfileStore(nextStore);
+  }
+
+  function completeRewardRound(board: BoardCell[], outcome: RoundOutcome, game: RewardGame) {
+    const nextKidWins = game.kidWins + (outcome === "kid" ? 1 : 0);
+    const nextAppWins = game.appWins + (outcome === "app" ? 1 : 0);
+    const nextTies = game.ties + (outcome === "tie" ? 1 : 0);
+    const seriesDone = nextKidWins === 3 || nextAppWins === 3 || game.round === 5;
+    const message = seriesDone
+      ? nextKidWins > nextAppWins
+        ? `${activeProfile.name} wins best of 5! +50 stars!`
+        : nextAppWins > nextKidWins
+          ? "Nice try. The app won this time."
+          : "Best of 5 ended in a tie!"
+      : outcome === "kid"
+        ? `${activeProfile.name} wins this round!`
+        : outcome === "app"
+          ? "The app wins this round. Try the next one!"
+          : "Tie round. Good defense!";
+    const nextGame = {
+      ...game,
+      board,
+      kidWins: nextKidWins,
+      appWins: nextAppWins,
+      ties: nextTies,
+      outcome,
+      seriesDone,
+      message,
+    };
+    if (seriesDone) {
+      persistRewardResult(nextGame);
+      nextGame.bonusAwarded = true;
+    }
+    setRewardGame(nextGame);
+  }
+
+  function handleRewardMove(index: number) {
+    if (rewardGame.board[index] || rewardGame.outcome || rewardGame.seriesDone) {
+      return;
+    }
+    const playerBoard = [...rewardGame.board];
+    playerBoard[index] = "X";
+    if (winnerFor(playerBoard) === "X") {
+      completeRewardRound(playerBoard, "kid", rewardGame);
+      return;
+    }
+    if (openMoves(playerBoard).length === 0) {
+      completeRewardRound(playerBoard, "tie", rewardGame);
+      return;
+    }
+    const appMove = pickAppMove(playerBoard);
+    const appBoard = [...playerBoard];
+    appBoard[appMove] = "O";
+    if (winnerFor(appBoard) === "O") {
+      completeRewardRound(appBoard, "app", rewardGame);
+      return;
+    }
+    if (openMoves(appBoard).length === 0) {
+      completeRewardRound(appBoard, "tie", rewardGame);
+      return;
+    }
+    setRewardGame({ ...rewardGame, board: appBoard, message: "Your turn. Look for a smart move!" });
+  }
+
+  function nextRewardRound() {
+    setRewardGame({
+      ...rewardGame,
+      board: Array<BoardCell>(9).fill(null),
+      round: rewardGame.round + 1,
+      outcome: null,
+      message: "New round. Your turn!",
+    });
   }
 
   async function importFile(file: File) {
@@ -675,6 +885,7 @@ function App() {
     setCurrentIndex(0);
     setAnswers([]);
     setSelectedIndex(null);
+    setRewardGame(makeRewardGame());
     setScreen(nextScreen);
   }
 
@@ -881,6 +1092,11 @@ function App() {
             <button type="button" className="purple-action" onClick={() => setScreen("home")}>
               <Home size={24} /> Home
             </button>
+            {rewardUnlocked && (
+              <button type="button" className="gold-action" onClick={startRewardGame}>
+                <Trophy size={24} /> Reward Game
+              </button>
+            )}
             <button
               type="button"
               className="green-action"
@@ -1003,6 +1219,10 @@ function App() {
                       <strong>{progress.needsPractice}</strong>
                       Practice
                     </span>
+                    <span>
+                      <strong>{activeProgress.rewardStats?.gamesWon ?? 0}/{activeProgress.rewardStats?.gamesPlayed ?? 0}</strong>
+                      Rewards
+                    </span>
                   </div>
                 </div>
                 <div className="subject-progress">
@@ -1031,6 +1251,47 @@ function App() {
                   <RefreshCcw size={22} /> Sync Hosted Packs
                 </button>
               </div>
+              <div className="parent-card missed-review-card">
+                <h2>Wrong Answers Review</h2>
+                <p>Last 25 quiz runs for {activeProfile.name}</p>
+                <div className="missed-run-list">
+                  {reviewRuns.length === 0 ? (
+                    <p>No quiz runs yet.</p>
+                  ) : (
+                    reviewRuns.map((run) => (
+                      <details className="missed-run" key={run.id}>
+                        <summary>
+                          <span>
+                            {run.subject} • {run.score}/{run.total}
+                          </span>
+                          <small>{new Date(run.date).toLocaleDateString()}</small>
+                        </summary>
+                        {run.missedDetails?.length ? (
+                          <div className="missed-detail-list">
+                            {run.missedDetails.map((detail) => (
+                              <article className="missed-detail" key={`${run.id}-${detail.questionId}`}>
+                                <h3>{detail.question}</h3>
+                                <p>
+                                  <strong>Child chose:</strong> {detail.selectedAnswer}
+                                </p>
+                                <p>
+                                  <strong>Correct:</strong> {detail.correctAnswer}
+                                </p>
+                                <p>{detail.explanation}</p>
+                                {detail.skill && <small>{detail.skill}</small>}
+                              </article>
+                            ))}
+                          </div>
+                        ) : run.missedQuestionIds.length ? (
+                          <p className="old-run-note">This older run saved missed IDs only. New quiz runs will show full question, answer, and explanation details.</p>
+                        ) : (
+                          <p className="old-run-note">No wrong answers in this run.</p>
+                        )}
+                      </details>
+                    ))
+                  )}
+                </div>
+              </div>
               <div className="parent-status">
                 <Lock size={18} />
                 <p>{parentMessage}</p>
@@ -1040,6 +1301,67 @@ function App() {
               </div>
             </>
           )}
+        </section>
+      )}
+
+      {screen === "reward" && (
+        <section className="reward-screen">
+          <header className="reward-header">
+            <button type="button" className="icon-button light" aria-label="Back to results" onClick={() => setScreen("results")}>
+              <ArrowLeft size={28} />
+            </button>
+            <h1>Tic Tac Toe Reward</h1>
+            <span className="reward-badge">Best of 5</span>
+          </header>
+
+          <div className="reward-card">
+            <div className="reward-scoreboard">
+              <span>
+                <strong>{activeProfile.name}</strong>
+                {rewardGame.kidWins}
+              </span>
+              <span>
+                <strong>Round</strong>
+                {rewardGame.round}/5
+              </span>
+              <span>
+                <strong>App</strong>
+                {rewardGame.appWins}
+              </span>
+            </div>
+            <p className="reward-message">{rewardGame.message}</p>
+            <div className="tic-board" aria-label="Tic Tac Toe board">
+              {rewardGame.board.map((cell, index) => (
+                <button
+                  type="button"
+                  className={`tic-cell ${cell === "X" ? "kid-mark" : cell === "O" ? "app-mark" : ""}`}
+                  key={index}
+                  onClick={() => handleRewardMove(index)}
+                  disabled={Boolean(cell) || Boolean(rewardGame.outcome) || rewardGame.seriesDone}
+                  aria-label={`Square ${index + 1}${cell ? ` ${cell}` : ""}`}
+                >
+                  {cell}
+                </button>
+              ))}
+            </div>
+            <div className="reward-actions">
+              {rewardGame.outcome && !rewardGame.seriesDone && (
+                <button type="button" className="green-action" onClick={nextRewardRound}>
+                  Next Round
+                </button>
+              )}
+              {rewardGame.seriesDone && (
+                <>
+                  <button type="button" className="gold-action" onClick={startRewardGame}>
+                    Play Again
+                  </button>
+                  <button type="button" className="purple-action" onClick={() => setScreen("home")}>
+                    <Home size={22} /> Home
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
         </section>
       )}
 
